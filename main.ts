@@ -1,11 +1,9 @@
 /**
- * SCD30 block
+ * CO2 block
  */
-//%color=#444444 icon="\uf185" block="SCD30"
-namespace SCD30 {
+//%color=#444444 icon="\uf185" block="CO2"
+namespace CO2 {
     
-    let temperature: number = 0
-    let humidity: number = 0
     let co2: number = 0
     
     control.inBackground(() => {
@@ -59,50 +57,15 @@ namespace SCD30 {
         co2 = tbuf.getNumber(NumberFormat.Float32BE, 0)
         co2 = Math.round(co2*100)/100
 
-        //temperature
-        tbuf.setNumber(NumberFormat.Int8LE, 0, buf.getNumber(NumberFormat.UInt8LE, 6))
-        tbuf.setNumber(NumberFormat.Int8LE, 1, buf.getNumber(NumberFormat.UInt8LE, 7))
-        tbuf.setNumber(NumberFormat.Int8LE, 3, buf.getNumber(NumberFormat.UInt8LE, 9))
-        tbuf.setNumber(NumberFormat.Int8LE, 4, buf.getNumber(NumberFormat.UInt8LE, 10))
-        temperature = tbuf.getNumber(NumberFormat.Float32BE, 0)
-        temperature = Math.round(temperature*100)/100
-
-        //humidity
-        tbuf.setNumber(NumberFormat.Int8LE, 0, buf.getNumber(NumberFormat.UInt8LE, 12))
-        tbuf.setNumber(NumberFormat.Int8LE, 1, buf.getNumber(NumberFormat.UInt8LE, 13))
-        tbuf.setNumber(NumberFormat.Int8LE, 3, buf.getNumber(NumberFormat.UInt8LE, 15))
-        tbuf.setNumber(NumberFormat.Int8LE, 4, buf.getNumber(NumberFormat.UInt8LE, 16))
-        humidity = tbuf.getNumber(NumberFormat.Float32BE, 0)
-        humidity = Math.round(humidity*100)/100
     }
 
     /**
      * Reads CO2
      */
     //% weight=87 blockGap=8
-    //% block="Read CO2" 
+    //% block="CO2 Wert" 
     //% blockId=read_CO2
     export function readCO2(): number{
         return co2
-    }
-
-    /**
-     * Reads Temperature
-     */
-    //% weight=87 blockGap=8
-    //% block="Read Temperature" 
-    //% blockId=read_Temperature
-    export function readTemperature(): number{
-        return temperature
-    }
-
-    /**
-     * Reads Humidity
-     */
-    //% weight=87 blockGap=8
-    //% block="Read Humidity" 
-    //% blockId=read_Humidity
-    export function readHumidity(): number{
-        return humidity
     }
 } 
