@@ -2,6 +2,7 @@
  * CO2 block
  */
 //%color=#FFA609 icon="\uf110" block="CO2"
+//% groups="['CO2', 'WIFI']"
 namespace CO2 {
     
     let co2: number = 0
@@ -60,18 +61,22 @@ namespace CO2 {
 
     }
 
+
+
     /**
      * Reads CO2
      */
     //% weight=87 blockGap=8
     //% block="CO2 Wert" 
     //% blockId=read_CO2
+    //% group="CO2"
     export function readCO2(): number{
         return co2
     }
 
 
     //% block
+    //% group="WIFI"
     export function camlCaseTwo() {
 
     }
