@@ -103,7 +103,7 @@ namespace CO2 {
      */
     //% weight=87 blockGap=8
     //% block="CO2 Wert"
-    //% blockGap=44 
+    //% blockGap=20 
     //% blockId=read_CO2
     //% group="CO2"
     export function readCO2(): number{
