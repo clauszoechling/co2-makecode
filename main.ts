@@ -8,6 +8,16 @@
 
 namespace CO2 {
 
+        //% shim=sendBufferAsm
+    export function sendBuffer(buf: Buffer, pin: DigitalPin) {
+    }
+
+    //% shim=setBufferMode
+    export function setBufferMode(pin: DigitalPin, mode: number) {
+
+    }
+
+
     
     let co2: number = 0
     
@@ -66,6 +76,12 @@ namespace CO2 {
     }
 
     /** ------------------ */
+
+
+
+
+
+
 
     let wifi_connected: boolean = false
     let thingspeak_connected: boolean = false
