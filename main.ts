@@ -125,7 +125,7 @@ namespace CO2 {
     //% rx.defl=SerialPin.P1
     //% ssid.defl=your_ssid
     //% pw.defl=your_pw
-    //% subcategory="something"
+    //% subcategory="WIFI"
     //% group="WIFI"
     export function connectWifi(tx: SerialPin, rx: SerialPin, baudrate: BaudRate, ssid: string, pw: string) {
         wifi_connected = false
@@ -149,6 +149,7 @@ namespace CO2 {
     //% block="Upload data to ThingSpeak|URL/IP = %ip|Write API key = %write_api_key|Field 1 = %n1|Field 2 = %n2|Field 3 = %n3|Field 4 = %n4|Field 5 = %n5|Field 6 = %n6|Field 7 = %n7|Field 8 = %n8"
     //% ip.defl=api.thingspeak.com
     //% write_api_key.defl=your_write_api_key
+    //% subcategory="WIFI"
     //% group="WIFI"
     export function connectThingSpeak(ip: string, write_api_key: string, n1: number, n2: number, n3: number, n4: number, n5: number, n6: number, n7: number, n8: number) {
         if (wifi_connected && write_api_key != "") {
@@ -172,6 +173,7 @@ namespace CO2 {
     */
     //% block="Wait %delay ms"
     //% delay.min=0 delay.defl=5000
+    //% subcategory="WIFI"
     //% group="WIFI"
     export function wait(delay: number) {
         if (delay > 0) basic.pause(delay)
@@ -181,6 +183,7 @@ namespace CO2 {
     * Check if ESP8266 successfully connected to Wifi
     */
     //% block="Wifi connected ?"
+    //% subcategory="WIFI"
     //% group="WIFI"
     export function isWifiConnected() {
         return wifi_connected
@@ -190,6 +193,7 @@ namespace CO2 {
     * Check if ESP8266 successfully connected to ThingSpeak
     */
     //% block="ThingSpeak connected ?"
+    //% subcategory="WIFI"
     //% group="WIFI"
     export function isThingSpeakConnected() {
         return thingspeak_connected
@@ -199,6 +203,7 @@ namespace CO2 {
     * Check if ESP8266 successfully uploaded data to ThingSpeak
     */
     //% block="Last data upload successful ?"
+    //% subcategory="WIFI"
     //% group="WIFI"
     export function isLastUploadSuccessful() {
         return last_upload_successful
