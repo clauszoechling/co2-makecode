@@ -4,8 +4,8 @@
 //%color=#FFA609 icon="\uf185" block="CO2"
 //% groups="['CO2', 'WIFI']"
 
-    let eins = 1;
-    let zwei = 2;
+    let Feld1 = 1;
+    let Feld2 = 2;
     
     enum alarmNum {
     eins,
@@ -158,7 +158,7 @@ namespace CO2 {
     /**
     * Connect to ThingSpeak and upload data. It would not upload anything if it failed to connect to Wifi or ThingSpeak.
     */
-    //% block="Upload data to ThingSpeak|URL/IP = %ip|Write API key = %write_api_key|Feld %name|Data = %data"
+    //% block="Upload data to ThingSpeak|URL/IP = %ip|Write API key = %write_api_key|F %name|Data = %data"
     //% ip.defl=api.thingspeak.com
     //% write_api_key.defl=your_write_api_key
     //% subcategory="WIFI"
