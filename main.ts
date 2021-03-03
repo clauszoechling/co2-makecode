@@ -69,4 +69,12 @@ namespace CO2 {
     export function readCO2(): number{
         return co2
     }
+
+
+    //% block
+    export function camlCaseTwo() {
+
+    }
+
+
 } 
