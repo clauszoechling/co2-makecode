@@ -152,18 +152,6 @@ namespace CO2 {
 
 
 
-//% weight=20 color=#b77ff0 icon="\uf017" block="DS3231"
-
-    //% blockId="DS3231_SET_ALARM" block="set alarm %name| minute %minute|second %second"
-    //% weight=60 blockGap
-    //% parts=DS3231 trackArgs=0
-    export function setAlarm(name: alarmNum, minute: number, second: number): void {
-       
-    }
-
-
-
-
     /**
     * Connect to ThingSpeak and upload data. It would not upload anything if it failed to connect to Wifi or ThingSpeak.
     */
