@@ -8,8 +8,8 @@
     let Feld2 = 2;
     
     enum alarmNum {
-    eins,
-    zwei
+    Feld1,
+    Feld2
     }
 
 namespace CO2 {
