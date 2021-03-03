@@ -4,9 +4,6 @@
 //%color=#FFA609 icon="\uf110" block="CO2"
 //% groups="['CO2', 'WIFI']"
 
-    let Feld1 = 1;
-    let Feld2 = 2;
-    
     enum alarmNum {
     Feld1,
     Feld2
