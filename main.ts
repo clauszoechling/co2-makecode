@@ -170,7 +170,7 @@ namespace CO2 {
             basic.pause(100)
             if (thingspeak_connected) {
                 last_upload_successful = false
-                let str: string = "GET /update?api_key=" + write_api_key + "&" + "fieldauswahl" + "=" + field + value
+                let str: string = "GET /update?api_key=" + write_api_key + "&" + "name:fieldauswahl" + "=" + field + value
                 sendAT("AT+CIPSEND=" + (str.length + 2))
                 sendAT(str, 0) // upload data
                 last_upload_successful = waitResponse()
