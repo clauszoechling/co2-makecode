@@ -1,7 +1,7 @@
 /**
  * CO2 block
  */
-//%color=#FFA609 icon="\uf110" block="CO2"
+//%color=#FFA609 icon="\uf185" block="CO2"
 //% groups="['CO2', 'WIFI']"
 
 
