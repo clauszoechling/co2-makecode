@@ -49,6 +49,7 @@ namespace CO2 {
         basic.pause(10)
         buf = pins.i2cReadBuffer(0x61, 18, false)
         
+        
         //co2
         tbuf.setNumber(NumberFormat.Int8LE, 0, buf.getNumber(NumberFormat.UInt8LE, 0))
         tbuf.setNumber(NumberFormat.Int8LE, 1, buf.getNumber(NumberFormat.UInt8LE, 1))
