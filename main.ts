@@ -4,16 +4,6 @@
 //%color=#FFA609 icon="\uf185" block="CO2"
 //% groups="['CO2', 'WIFI']"
 
-    enum fieldauswahl {
-    field1,
-    field2,
-    field3,
-    field4,
-    field5,
-    field6,
-    field7,
-    field8
-    }
 namespace CO2 {
     
     let co2: number = 0
@@ -171,7 +161,6 @@ namespace CO2 {
             basic.pause(100)
             if (thingspeak_connected) {
                 last_upload_successful = false
-                //let str: string = "GET /update?api_key=" + write_api_key + "&" + "name:fieldauswahl" + "=" + field + value
                 let str: string = "GET /update?api_key=" + write_api_key + "&field1=" + n1 + "&field2=" + n2 + "&field3=" + n3 + "&field4=" + n4 + "&field5=" + n5 + "&field6=" + n6 + "&field7=" + n7 + "&field8=" + n8
                 sendAT("AT+CIPSEND=" + (str.length + 2))
                 sendAT(str, 0) // upload data
