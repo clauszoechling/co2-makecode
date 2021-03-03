@@ -4,9 +4,12 @@
 //%color=#FFA609 icon="\uf185" block="CO2"
 //% groups="['CO2', 'WIFI']"
 
+    let eins = 1;
+    let zwei = 2;
+    
     enum alarmNum {
-    A1,
-    A2
+    eins,
+    zwei
     }
 
 namespace CO2 {
