@@ -157,7 +157,7 @@ namespace CO2 {
     //% subcategory="WIFI"
     //% group="WIFI"
     
-    export function connectThingSpeak(ip: string, write_api_key: string, fieldauswahl: 1, data: number) {
+    export function connectThingSpeak(ip: string, write_api_key: string, fieldauswahl: number, data: number) {
 
         if (wifi_connected && write_api_key != "") {
             thingspeak_connected = false
