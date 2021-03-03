@@ -157,7 +157,7 @@ namespace CO2 {
     //% subcategory="WIFI"
     //% group="WIFI"
     
-    export function connectThingSpeak(ip: string, write_api_key: string, field: fieldauswahl, data: number) {
+    export function connectThingSpeak(ip: string, write_api_key: string, name: fieldauswahl, data: number) {
 
         if (wifi_connected && write_api_key != "") {
             thingspeak_connected = false
@@ -166,7 +166,7 @@ namespace CO2 {
             basic.pause(100)
             if (thingspeak_connected) {
                 last_upload_successful = false
-                let str: string = "GET /update?api_key=" + write_api_key + "&field" + field +"=" + data
+                let str: string = "GET /update?api_key=" + write_api_key + "&field" + name +"=" + data
                 sendAT("AT+CIPSEND=" + (str.length + 2))
                 sendAT(str, 0) // upload data
                 last_upload_successful = waitResponse()
