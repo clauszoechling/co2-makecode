@@ -121,8 +121,8 @@ namespace CO2 {
     * Initialize ESP8266 module and connect it to Wifi router
     */
     //% block="Initialize ESP8266|RX (Tx of micro:bit) %tx|TX (Rx of micro:bit) %rx|Baud rate %baudrate|Wifi SSID = %ssid|Wifi PW = %pw"
-    //% tx.defl=SerialPin.P0
-    //% rx.defl=SerialPin.P1
+    //% tx.defl=SerialPin.P1
+    //% rx.defl=SerialPin.P2
     //% ssid.defl=your_ssid
     //% pw.defl=your_pw
     //% subcategory="WIFI"
