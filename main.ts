@@ -4,14 +4,14 @@
 //%color=#FFA609 icon="\uf110" block="CO2"
 //% groups="['CO2', 'WIFI']"
 
-    enum alarmNum {
-    Feld1,
-    Feld2
-    }
+    
 
 namespace CO2 {
 
-
+enum alarmNum {
+    Feld1,
+    Feld2
+    }
     
     let co2: number = 0
     
