@@ -1,13 +1,16 @@
+    enum alarmNum {
+        A1,
+        B1
+    }
+
+
 /**
  * CO2 block
  */
 //%color=#FFA609 icon="\uf110" block="CO2"
 //% groups="['CO2', 'WIFI']"
 
-    enum alarmNum {
-        A1,
-        B1
-    }
+
 
 namespace CO2 {
 
