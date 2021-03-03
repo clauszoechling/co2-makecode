@@ -5,6 +5,11 @@
 //% groups="['CO2', 'WIFI']"
 
 namespace CO2 {
+
+    enum alarmNum {
+    A1,
+    A2
+}
     
     let co2: number = 0
     
