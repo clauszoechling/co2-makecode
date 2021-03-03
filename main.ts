@@ -4,14 +4,13 @@
 //%color=#FFA609 icon="\uf110" block="CO2"
 //% groups="['CO2', 'WIFI']"
 
-    
+    enum alarmNum {
+        A1,
+        B1
+    }
 
 namespace CO2 {
 
-enum alarmNum {
-    Feld1,
-    Feld2
-    }
     
     let co2: number = 0
     
@@ -161,6 +160,7 @@ enum alarmNum {
     //% subcategory="WIFI"
     //% group="WIFI"
     
+
     export function connectThingSpeak(ip: string, write_api_key: string, name: alarmNum, data: number) {
 
         if (wifi_connected && write_api_key != "") {
