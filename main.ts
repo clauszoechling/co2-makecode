@@ -151,13 +151,13 @@ namespace CO2 {
     /**
     * Connect to ThingSpeak and upload data. It would not upload anything if it failed to connect to Wifi or ThingSpeak.
     */
-    //% block="Upload data to ThingSpeak|URL/IP = %ip|Write API key = %write_api_key|Field = %field|Data = %data"
+    //% block="Upload data to ThingSpeak|URL/IP = %ip|Write API key = %write_api_key|set alarm %field|Data = %data"
     //% ip.defl=api.thingspeak.com
     //% write_api_key.defl=your_write_api_key
     //% subcategory="WIFI"
     //% group="WIFI"
     
-    export function connectThingSpeak(ip: string, write_api_key: string, field: number, data: number) {
+    export function connectThingSpeak(ip: string, write_api_key: string, field: fieldauswahl, data: number) {
 
         if (wifi_connected && write_api_key != "") {
             thingspeak_connected = false
