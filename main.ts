@@ -125,6 +125,7 @@ namespace CO2 {
     //% rx.defl=SerialPin.P1
     //% ssid.defl=your_ssid
     //% pw.defl=your_pw
+    //% subcategory="something"
     //% group="WIFI"
     export function connectWifi(tx: SerialPin, rx: SerialPin, baudrate: BaudRate, ssid: string, pw: string) {
         wifi_connected = false
