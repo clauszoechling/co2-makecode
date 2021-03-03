@@ -1,7 +1,7 @@
 /**
  * CO2 block
  */
-//%color=#444444 icon="\uf110" block="CO2"
+//%color=#FFA609 icon="\uf110" block="CO2"
 namespace CO2 {
     
     let co2: number = 0
