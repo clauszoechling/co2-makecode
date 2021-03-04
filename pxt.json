@@ -8,6 +8,7 @@
     },
     "files": [
         "main.ts",
+        "sendBuffer.asm",
         "README.md"
     ],
     "testFiles": [
