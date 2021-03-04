@@ -128,11 +128,21 @@ namespace CO2 {
     //% group="LEDs"
     /*export function sendBuffer(buf: farbauswahl, pin: DigitalPin) {
     }*/
-    export function LEDs(buf: farbauswahl, pin: DigitalPin) {
-        if (buf = farbauswahl.rot){
-        //CO2.sendBuffer(hex`ff0000 00ff00 0000ff`, DigitalPin.P0)
+    export function LEDs(farbauswahl: string, pin: DigitalPin) {
+        if (farbauswahl = "rot"){
+            CO2.sendBuffer(hex`ffffff ffffff ffffff`, DigitalPin.P0)
         }
     }
+
+
+    //% pin.defl=DigitalPin.P12
+    //% block="LED Farben|LEDs %buf|Pin %pin"
+    //% shim=sendBufferAsm
+    //% group="LEDs"
+    export function sendBuffer(buf: Buffer, pin: DigitalPin) {
+    }
+    
+
 
     //% shim=setBufferMode
     //% pin.defl=DigitalPin.P12
