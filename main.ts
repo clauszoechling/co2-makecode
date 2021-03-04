@@ -122,14 +122,12 @@ namespace CO2 {
 
     /** ------------------ */
 
-    //% pin.defl=DigitalPin.P12
-    //% block="LED Farben|LEDs %farbauswahl|Pin %pin"
     //% shim=sendBufferAsm
     //% group="LEDs"
     /*export function sendBuffer(buf: farbauswahl, pin: DigitalPin) {
     }*/
-    export function LEDs(farbauswahl: string, pin: DigitalPin) {
-        if (farbauswahl = "rot"){
+    export function LEDs(auswahl: farbauswahl, pin: DigitalPin) {
+        if (auswahl = farbauswahl.rot){
             basic.showIcon(IconNames.Heart)
             //CO2.sendBuffer(hex`ffffff ffffff ffffff`, DigitalPin.P12)
         }
