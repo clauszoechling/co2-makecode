@@ -1,8 +1,4 @@
-enum farbauswahl{
-    rot,
-    gruen,
-    blau
-}
+
 
 /**
  * CO2 block
@@ -10,7 +6,11 @@ enum farbauswahl{
 //%color=#FFA609 icon="\uf185" block="CO2"
 //% groups="['CO2', ,'LEDs', 'WIFI']"
 
-
+enum farbauswahl{
+    rot,
+    gruen,
+    blau
+}
 
 namespace CO2 {
     
