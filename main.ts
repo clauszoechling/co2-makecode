@@ -121,6 +121,7 @@ namespace CO2 {
     /** ------------------ */
 
     //% shim=sendBufferAsm
+    //% block="Farben|led1 %farbauswahl|Pin %pin"
     //% group="LEDs2"
     /*export function sendBuffer(buf: farbauswahl, pin: DigitalPin) {
     }*/
