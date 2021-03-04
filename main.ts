@@ -128,11 +128,11 @@ namespace CO2 {
     //% group="LEDs"
     /*export function sendBuffer(buf: farbauswahl, pin: DigitalPin) {
     }*/
-    /*export function LEDs(farbauswahl: string, pin: DigitalPin) {
+    export function LEDs(farbauswahl: string, pin: DigitalPin) {
         if (farbauswahl = "rot"){
             //CO2.sendBuffer(hex`ffffff ffffff ffffff`, DigitalPin.P12)
         }
-    }*/
+    }
 
 
     //% pin.defl=DigitalPin.P12
