@@ -130,6 +130,7 @@ namespace CO2 {
     }*/
     export function LEDs(farbauswahl: string, pin: DigitalPin) {
         if (farbauswahl = "rot"){
+            basic.showIcon(IconNames.Heart)
             //CO2.sendBuffer(hex`ffffff ffffff ffffff`, DigitalPin.P12)
         }
     }
