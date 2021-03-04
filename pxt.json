@@ -9,6 +9,7 @@
     "files": [
         "main.ts",
         "sendBuffer.asm",
+        "setBufferMode.asm"
         "README.md"
     ],
     "testFiles": [
