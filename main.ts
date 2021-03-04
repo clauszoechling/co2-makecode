@@ -1,16 +1,14 @@
-
+enum farbauswahl{
+    rot,
+    gruen,
+    blau
+}
 
 /**
  * CO2 block
  */
 //%color=#FFA609 icon="\uf185" block="CO2"
 //% groups="['CO2', ,'LEDs', 'WIFI']"
-
-enum farbauswahl{
-    rot,
-    gruen,
-    blau
-}
 
 namespace CO2 {
     
@@ -123,10 +121,10 @@ namespace CO2 {
     /** ------------------ */
 
     //% shim=sendBufferAsm
-    //% group="LEDs"
+    //% group="LEDs2"
     /*export function sendBuffer(buf: farbauswahl, pin: DigitalPin) {
     }*/
-    export function Farben(buf: farbauswahl, pin: DigitalPin) {
+    export function Farben(led1: farbauswahl, pin: DigitalPin) {
         //if (buf = farbauswahl.rot){
             //basic.showIcon(IconNames.Heart)
             //CO2.sendBuffer(hex`ffffff ffffff ffffff`, DigitalPin.P12)
