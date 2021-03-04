@@ -1,8 +1,9 @@
 enum farbauswahl{
         //% block="Eins"
-        eins,
+        rot,
         //% block="Zwei"
-        zwei
+        gruen,
+        blau
 }
 
 /**
@@ -125,8 +126,14 @@ namespace CO2 {
     //% block
     export function foo(n: number, s: string, e: farbauswahl): void {
         basic.showString("" + (e))
+        if (e == 0){
+            CO2.sendBuffer(hex`ff0000 00ff00 0000ff`, DigitalPin.P12)
+        }
         if (e == 1){
-            basic.showIcon(IconNames.Heart)
+            CO2.sendBuffer(hex`ffff00 00ffff ff00ff`, DigitalPin.P12)
+        }
+        if (e == 2){
+            CO2.sendBuffer(hex`ffffff ffffff ffffff`, DigitalPin.P12)
         }
     }
 
