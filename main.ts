@@ -126,11 +126,11 @@ namespace CO2 {
     //% group="LEDs"
     /*export function sendBuffer(buf: farbauswahl, pin: DigitalPin) {
     }*/
-    export function LEDs(auswahl: farbauswahl, pin: DigitalPin) {
-        if (auswahl = farbauswahl.rot){
-            basic.showIcon(IconNames.Heart)
+    export function Farben(buf: farbauswahl, pin: DigitalPin) {
+        //if (buf = farbauswahl.rot){
+            //basic.showIcon(IconNames.Heart)
             //CO2.sendBuffer(hex`ffffff ffffff ffffff`, DigitalPin.P12)
-        }
+        //}
     }
 
 
