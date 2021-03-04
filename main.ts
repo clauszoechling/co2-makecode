@@ -125,7 +125,7 @@ namespace CO2 {
     //% block
     export function foo(n: number, s: string, e: farbauswahl): void {
         basic.showString("" + (e))
-        if (e = farbauswahl.eins){
+        if (e = 1){
             basic.showIcon(IconNames.Heart)
         }
     }
