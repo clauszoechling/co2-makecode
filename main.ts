@@ -118,14 +118,14 @@ namespace CO2 {
 
     //% block
     //% shim=sendBufferAsm
-    //% pin.defl=SerialPin.P12
+    //% pin.defl=DigitalPin.P12
     //% group="LEDs"
     export function sendBuffer(buf: Buffer, pin: DigitalPin) {
     }
 
     //% block
     //% shim=setBufferMode
-    //% pin.defl=SerialPin.P12
+    //% pin.defl=DigitalPin.P12
     //% group="LEDs"
     export function setBufferMode(pin: DigitalPin, mode: number) {
     }
