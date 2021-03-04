@@ -1,7 +1,7 @@
 enum farbauswahl{
-    'ff0000',
-    '00ff00',
-    '0000ff'
+    rot,
+    gruen,
+    blau
 }
 
 /**
@@ -123,7 +123,7 @@ namespace CO2 {
     /** ------------------ */
 
     //% pin.defl=DigitalPin.P12
-    //% block="LED Farben|LEDs %buf|Pin %pin"
+    //% block="LED Farben|LEDs %farbauswahl|Pin %pin"
     //% shim=sendBufferAsm
     //% group="LEDs"
     export function sendBuffer(buf: farbauswahl, pin: DigitalPin) {
