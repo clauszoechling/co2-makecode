@@ -116,7 +116,7 @@ namespace CO2 {
 
     /** ------------------ */
 
-    //% block
+    
     //% shim=sendBufferAsm
     //% pin.defl=DigitalPin.P12
     //% group="LEDs"
