@@ -1,7 +1,7 @@
 enum farbauswahl{
-    rot,
-    gruen,
-    blau
+    rot = 1,
+    gruen = 2,
+    blau = 3
 }
 
 /**
