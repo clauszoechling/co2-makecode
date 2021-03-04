@@ -120,7 +120,7 @@ namespace CO2 {
     //% shim=sendBufferAsm
     //% pin.defl=DigitalPin.P12
     //% group="LEDs"
-    export function Farben(pin: DigitalPin, led1: string, led2: string, led3: string, led4: string, led5: string, led6: string, led7: string) {
+    export function sendBuffer(pin: DigitalPin, led1: string, led2: string, led3: string, led4: string, led5: string, led6: string, led7: string) {
     }
 
     //% block
