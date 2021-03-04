@@ -2,7 +2,7 @@
  * CO2 block
  */
 //%color=#FFA609 icon="\uf185" block="CO2"
-//% groups="['CO2', 'WIFI']"
+//% groups="['CO2', ,'LEDs', 'WIFI']"
 
 
 
@@ -118,13 +118,13 @@ namespace CO2 {
 
     //% block
     //% shim=sendBufferAsm
-    //% group="CO2"
+    //% group="LEDs"
     export function sendBuffer(buf: Buffer, pin: DigitalPin) {
     }
 
     //% block
     //% shim=setBufferMode
-    //% group="CO2"
+    //% group="LEDs"
     export function setBufferMode(pin: DigitalPin, mode: number) {
     }
 
