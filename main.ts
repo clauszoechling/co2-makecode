@@ -121,15 +121,15 @@ namespace CO2 {
     /** ------------------ */
 
     //% shim=sendBufferAsm
-    //% block="Farben|led1 %farbauswahl|Pin %pin"
+    //% block="Farben|led1 %auswahl|Pin %pin"
     //% group="LEDs2"
     /*export function sendBuffer(buf: farbauswahl, pin: DigitalPin) {
     }*/
-    export function Farben(farbauswahl: farbauswahl, pin: DigitalPin) {
-        //if (buf = farbauswahl.rot){
-            //basic.showIcon(IconNames.Heart)
+    export function Farben(auswahl: farbauswahl, pin: DigitalPin) {
+        if (auswahl = farbauswahl.rot){
+            basic.showIcon(IconNames.Heart)
             //CO2.sendBuffer(hex`ffffff ffffff ffffff`, DigitalPin.P12)
-        //}
+        }
     }
 
 
