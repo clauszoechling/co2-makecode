@@ -123,12 +123,6 @@ namespace CO2 {
     export function sendBuffer(buf: Buffer, pin: DigitalPin) {
     }
 
-    //% block
-    //% shim=setBufferMode
-    //% pin.defl=DigitalPin.P12
-    //% group="LEDs"
-    export function setBufferMode(pin: DigitalPin, mode: number) {
-    }
 
     /** ------------------ */
 
