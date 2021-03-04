@@ -128,13 +128,13 @@ namespace CO2 {
     export function foo(n: number, s: string, e: farbauswahl): void {
         basic.showString("" + (e))
         if (e == 0){
-            CO2.sendBuffer(hex`ff0000 00ff00 0000ff`, DigitalPin.P12)
+            CO2.sendBuffer(hex`ff000000ff000000ff`, DigitalPin.P12)
         }
         if (e == 1){
-            CO2.sendBuffer(hex`ffff00 00ffff ff00ff`, DigitalPin.P12)
+            CO2.sendBuffer(hex`ffff0000ffffff00ff`, DigitalPin.P12)
         }
         if (e == 2){
-            CO2.sendBuffer(hex`ffffff ffffff ffffff`, DigitalPin.P12)
+            CO2.sendBuffer(hex`ffffffffffffffffff`, DigitalPin.P12)
         }
     }
 
