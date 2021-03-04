@@ -116,11 +116,13 @@ namespace CO2 {
 
     /** ------------------ */
 
+    //% block
     //% shim=sendBufferAsm
     //% group="CO2"
     export function sendBuffer(buf: Buffer, pin: DigitalPin) {
     }
 
+    //% block
     //% shim=setBufferMode
     //% group="CO2"
     export function setBufferMode(pin: DigitalPin, mode: number) {
