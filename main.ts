@@ -116,9 +116,7 @@ namespace CO2 {
 
     /** ------------------ */
 
-    //% weight=87 blockGap=20
-    //% block="LEDs"
-    //% pin.defl=DigitalPin.P12
+    //% block
     //% shim=sendBufferAsm
     //% group="LEDs"
     export function sendBuffer(pin: DigitalPin, led1: number, led2: number, led3: number, led4: number) {
