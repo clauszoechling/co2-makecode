@@ -119,7 +119,7 @@ namespace CO2 {
     //% block
     //% shim=sendBufferAsm
     //% group="LEDs"
-    export function sendBuffer(pin: DigitalPin, led1: string, led2: number, led3: number, led4: number) {
+    export function sendBuffer(pin: DigitalPin, led1: string, led2: string, led3: string, led4: string) {
     }
     /*export function sendBuffer(buf: Buffer, pin: DigitalPin) {
     }*/
