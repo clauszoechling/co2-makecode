@@ -1,8 +1,9 @@
 enum farbauswahl{
-        //% block="Eins"
+        //% block="rot"
         rot,
-        //% block="Zwei"
+        //% block="gruen"
         gruen,
+        //% block="blau"
         blau
 }
 
