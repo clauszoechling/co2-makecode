@@ -1,3 +1,9 @@
+enum farbauswahl{
+    rot = 'ff0000',
+    gruen = '00ff00',
+    blau = '0000ff'
+}
+
 /**
  * CO2 block
  */
@@ -120,7 +126,7 @@ namespace CO2 {
     //% block="LED Farben|LEDs %buf|Pin %pin"
     //% shim=sendBufferAsm
     //% group="LEDs"
-    export function sendBuffer(buf: string, pin: DigitalPin) {
+    export function sendBuffer(buf: farbauswahl, pin: DigitalPin) {
     }
 
     //% shim=setBufferMode
