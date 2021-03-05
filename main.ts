@@ -1,12 +1,3 @@
-enum farbauswahl{
-        //% block="rot"
-        rot,
-        //% block="gruen"
-        gruen,
-        //% block="blau" 
-        blau
-}
-let farb_code = pins.createBuffer(9);
 
 /**
  * CO2 block
@@ -125,65 +116,6 @@ namespace CO2 {
     /** ------------------ */
 
 
-    //% block
-    export function foo(n: number, s: string, led1: farbauswahl, led2: farbauswahl, led3: farbauswahl, buf: Buffer): void {
-        basic.showString("" + (led1))
-        if (led1 == 0){
-            //let farb_code2 = 'ffffffffffffffffff';
-            //let list: number = 0xff00ff;
-
-            //CO2.sendBuffer(hex`000000 000000 000000 000000 000000 000000 000000`, DigitalPin.P12)
-            //basic.pause(1000)
-            let var1 = "hex "
-            let var2 = "`ff0000 00ff00 0000ff 000000 000000 000000 000000`"
-            let var3 = "hex`ff0000 000000 000000 000000 000000 000000 000000`"
-            let gesamt = var1 + var2
-           
-            //let versuch = Buffer.fromUTF8("hex`ff0000 00ff00 0000ff 000000 000000 000000 000000`")
-            let versuch = Buffer.fromUTF8(var3)
-            //CO2.sendBuffer(versuch, DigitalPin.P12)
-            //basic.pause(3000)
- 
-            //let buf3 = Buffer.fromUTF8("hex `3`")
-            ////let temp = Buffer.fromUTF8("hex`1 2 3`")
-            ////CO2.sendBuffer(temp, DigitalPin.P12)
-            ////basic.pause(5000)
-            //CO2.sendBuffer("hex + ` + list + ` ", DigitalPin.P12)
-            //CO2.sendBuffer(hex farb_code3, DigitalPin.P12)
-        }
-
-    }
-
-
-
-    //% shim=sendBufferAsm
-    //% block="Farben|led1 %auswahl|Pin %pin"
-    //% group="LEDs2"
-    /*export function sendBuffer(buf: farbauswahl, pin: DigitalPin) {
-    }*/
-    export function Farben(auswahl: farbauswahl, pin: DigitalPin) {
-        //if (auswahl = 1){
-            //basic.showIcon(IconNames.Heart)
-            //CO2.sendBuffer(hex`ffffff ffffff ffffff`, DigitalPin.P12)
-        //}
-    }
-
-
-    //% pin.defl=DigitalPin.P12
-    //% block="sendBuffer|buffer %buf|Pin %pin"
-    //% shim=sendBufferAsm
-    //% group="LEDs"
-    export function sendBuffer(buf: Buffer, pin: DigitalPin) {
-    }
-    
-
-
-    //% shim=setBufferMode
-    //% pin.defl=DigitalPin.P12
-    //% group="LEDs"
-    export function setBufferMode(pin: DigitalPin, mode: number) {
-
-    }
 
 
     /** ------------------ */
