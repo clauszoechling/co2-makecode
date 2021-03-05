@@ -137,7 +137,7 @@ namespace CO2 {
             let var1 = "hex "
             let var2 = "000000 000000 000000 000000 000000 000000 000000"
             let gesamt = var1 + var2
-            let versuch = Buffer.fromUTF8("255")
+            let versuch = Buffer.fromUTF8("0xff0000")
             CO2.sendBuffer(versuch, DigitalPin.P12)
             basic.pause(3000)
  
