@@ -3,7 +3,7 @@ enum farbauswahl{
         rot,
         //% block="gruen"
         gruen,
-        //% block="blau"
+        //% block="blau" 
         blau
 }
 let farb_code = pins.createBuffer(9);
