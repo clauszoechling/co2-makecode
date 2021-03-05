@@ -354,20 +354,7 @@ namespace neopixel {
             this.buf.shift(-offset * stride, this.start * stride, this._length * stride)
         }
 
-        /**
-         * Rotate LEDs forward.
-         * You need to call ``show`` to make the changes visible.
-         * @param offset number of pixels to rotate forward, eg: 1
-         */
-        //% blockId="neopixel_rotate" block="%strip|rotate pixels by %offset" blockGap=8
-        //% strip.defl=strip
-        //% weight=39
-        //% parts="neopixel"
-        rotate(offset: number = 1): void {
-            offset = offset >> 0;
-            const stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
-            this.buf.rotate(-offset * stride, this.start * stride, this._length * stride)
-        }
+
 
         /**
          * Set the pin where the neopixel is connected, defaults to P0.
