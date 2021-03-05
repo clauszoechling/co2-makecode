@@ -141,7 +141,7 @@ namespace CO2 {
          * @param high maximum value, eg: 255
          */
         //% weight=84
-        //% blockId=neopixel_show_bar_graph block="%strip|show bar graph of %value|up to %high"
+        
         //% strip.defl=strip
         //% icon="\uf080"
         //% parts="neopixel"
@@ -192,7 +192,7 @@ namespace CO2 {
          * Sets the number of pixels in a matrix shaped strip
          * @param width number of pixels in a row
          */
-        //% blockId=neopixel_set_matrix_width block="%strip|set matrix width %width"
+        
         //% strip.defl=strip
         //% blockGap=8
         //% weight=5
@@ -208,7 +208,7 @@ namespace CO2 {
          * @param y horizontal position
          * @param rgb RGB color of the LED
          */
-        //% blockId="neopixel_set_matrix_color" block="%strip|set matrix color at x %x|y %y|to %rgb=neopixel_colors"
+        
         //% strip.defl=strip
         //% weight=4
         //% parts="neopixel" advanced=true
@@ -228,7 +228,7 @@ namespace CO2 {
          * @param pixeloffset position of the LED in the strip
          * @param white brightness of the white LED
          */
-        //% blockId="neopixel_set_pixel_white" block="%strip|set pixel white LED at %pixeloffset|to %white"
+      
         //% strip.defl=strip
         //% blockGap=8
         //% weight=80
@@ -268,7 +268,7 @@ namespace CO2 {
         /**
          * Gets the number of pixels declared on the strip
          */
-        //% blockId="neopixel_length" block="%strip|length" blockGap=8
+       
         //% strip.defl=strip
         //% weight=60 advanced=true
         length() {
@@ -290,7 +290,7 @@ namespace CO2 {
         /**
          * Apply brightness to current colors using a quadratic easing function.
          **/
-        //% blockId="neopixel_each_brightness" block="%strip|ease brightness" blockGap=8
+        
         //% strip.defl=strip
         //% weight=58
         //% parts="neopixel" advanced=true
@@ -321,7 +321,7 @@ namespace CO2 {
          * @param length number of LEDs in the range. eg: 4
          */
         //% weight=89
-        //% blockId="neopixel_range" block="%strip|range from %start|with %length|leds"
+        
         //% strip.defl=strip
         //% parts="neopixel"
         //% blockSetVariable=range
@@ -344,7 +344,7 @@ namespace CO2 {
          * You need to call ``show`` to make the changes visible.
          * @param offset number of pixels to shift forward, eg: 1
          */
-        //% blockId="neopixel_shift" block="%strip|shift pixels by %offset" blockGap=8
+        
         //% strip.defl=strip
         //% weight=40
         //% parts="neopixel"
@@ -359,7 +359,7 @@ namespace CO2 {
          * You need to call ``show`` to make the changes visible.
          * @param offset number of pixels to rotate forward, eg: 1
          */
-        //% blockId="neopixel_rotate" block="%strip|rotate pixels by %offset" blockGap=8
+        
         //% strip.defl=strip
         //% weight=39
         //% parts="neopixel"
@@ -383,7 +383,7 @@ namespace CO2 {
         /**
          * Estimates the electrical current (mA) consumed by the current light configuration.
          */
-        //% weight=9 blockId=neopixel_power block="%strip|power (mA)"
+       
         //% strip.defl=strip
         //% advanced=true
         power(): number {
@@ -550,7 +550,7 @@ namespace CO2 {
      * @param s saturation from 0 to 99
      * @param l luminosity from 0 to 99
      */
-    //% blockId=neopixelHSL block="hue %h|saturation %s|luminosity %l"
+    
     export function hsl(h: number, s: number, l: number): number {
         h = Math.round(h);
         s = Math.round(s);
