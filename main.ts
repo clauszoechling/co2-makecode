@@ -131,9 +131,7 @@ namespace CO2 {
         if (led1 == 0){
             //let farb_code2 = 'ffffffffffffffffff';
             //let list: number = 0xff00ff;
-            buf[0] = 0xff
-            buf[1] = 0xff
-            buf[2] = 0xff 
+            buf = Buffer.fromUTF8("hex `ff00ff ffffff`")
             //let temp = Buffer.fromHex("0xffff00ffffff0000ff")
             CO2.sendBuffer(buf, DigitalPin.P12)
             //CO2.sendBuffer("hex + ` + list + ` ", DigitalPin.P12)
