@@ -1,5 +1,5 @@
 
-> Diese Seite bei [https://misterburns1234.github.io/co2-makecode/](https://misterburns1234.github.io/co2-makecode/) öffnen
+> Diese Seite bei [https://misterburns1234.github.io/co2-makecode/](https://clauszoechling.github.io/co2-makecode/) öffnen
 
 ## Als Erweiterung verwenden
 
