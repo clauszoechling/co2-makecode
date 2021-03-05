@@ -132,18 +132,17 @@ namespace CO2 {
             //let farb_code2 = 'ffffffffffffffffff';
             //let list: number = 0xff00ff;
 
-            CO2.sendBuffer(hex`000000 000000 000000 000000 000000 000000 000000`, DigitalPin.P12)
-            basic.pause(1000)
+            //CO2.sendBuffer(hex`000000 000000 000000 000000 000000 000000 000000`, DigitalPin.P12)
+            //basic.pause(1000)
             let var1 = "hex "
             let var2 = "`ff0000 00ff00 0000ff 000000 000000 000000 000000`"
             let var3 = "hex`ff0000 000000 000000 000000 000000 000000 000000`"
-            let var4 = "\x68\x65\x78\x60\x30\x30\x30\x30\x30\x30\x20\x30\x30\x30\x30\x30\x30\x20\x30\x30\x30\x30\x30\x30\x20\x30\x30\x30\x30\x30\x30\x20\x30\x30\x30\x30\x30\x30\x20\x30\x30\x30\x30\x30\x30\x20\x30\x30\x30\x30\x30\x30\x60"
             let gesamt = var1 + var2
            
             //let versuch = Buffer.fromUTF8("hex`ff0000 00ff00 0000ff 000000 000000 000000 000000`")
-            let versuch = Buffer.fromUTF8(var4)
-            CO2.sendBuffer(versuch, DigitalPin.P12)
-            basic.pause(3000)
+            let versuch = Buffer.fromUTF8(var3)
+            //CO2.sendBuffer(versuch, DigitalPin.P12)
+            //basic.pause(3000)
  
             //let buf3 = Buffer.fromUTF8("hex `3`")
             ////let temp = Buffer.fromUTF8("hex`1 2 3`")
