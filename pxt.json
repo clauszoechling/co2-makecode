@@ -9,8 +9,6 @@
     },
     "files": [
         "main.ts",
-        "sendBuffer.asm",
-        "setBufferMode.asm",
         "neopixel.ts",
         "README.md"
     ],
