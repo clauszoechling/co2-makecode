@@ -134,7 +134,7 @@ namespace CO2 {
             CO2.sendBuffer(hex`000000 000000 000000 000000 000000 000000 000000`, DigitalPin.P12)
             let buf3 = Buffer.fromUTF8("hex `ff0000 00ff00 0000ff ff0000 00ff00 0000ff ff0000`")
             //let temp = Buffer.fromHex("0xffff00ffffff0000ff")
-            CO2.sendBuffer(buf3, DigitalPin.P12)
+            ////CO2.sendBuffer(buf3, DigitalPin.P12)
             basic.pause(5000)
             //CO2.sendBuffer("hex + ` + list + ` ", DigitalPin.P12)
             //CO2.sendBuffer(hex farb_code3, DigitalPin.P12)
