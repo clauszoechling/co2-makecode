@@ -134,7 +134,7 @@ namespace CO2 {
             buf[0] = 0xff
             buf[1] = 0xff
             buf[2] = 0xff 
-            let temp = Buffer.fromHex("0xffff00ffffff0000ff")
+            //let temp = Buffer.fromHex("0xffff00ffffff0000ff")
             CO2.sendBuffer(buf, DigitalPin.P12)
             //CO2.sendBuffer("hex + ` + list + ` ", DigitalPin.P12)
             //CO2.sendBuffer(hex farb_code3, DigitalPin.P12)
