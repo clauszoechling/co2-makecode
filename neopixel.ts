@@ -265,15 +265,7 @@ namespace neopixel {
             this.buf.fill(0, this.start * stride, this._length * stride);
         }
 
-        /**
-         * Gets the number of pixels declared on the strip
-         */
-        //% blockId="neopixel_length" block="%strip|length" blockGap=8
-        //% strip.defl=strip
-        //% weight=60 advanced=true
-        length() {
-            return this._length;
-        }
+
 
         /**
          * Set the brightness of the strip. This flag only applies to future operation.
@@ -287,72 +279,10 @@ namespace neopixel {
             this.brightness = brightness & 0xff;
         }
 
-        /**
-         * Apply brightness to current colors using a quadratic easing function.
-         **/
-        //% blockId="neopixel_each_brightness" block="%strip|ease brightness" blockGap=8
-        //% strip.defl=strip
-        //% weight=58
-        //% parts="neopixel" advanced=true
-        easeBrightness(): void {
-            const stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
-            const br = this.brightness;
-            const buf = this.buf;
-            const end = this.start + this._length;
-            const mid = Math.idiv(this._length, 2);
-            for (let i = this.start; i < end; ++i) {
-                const k = i - this.start;
-                const ledoffset = i * stride;
-                const br = k > mid
-                    ? Math.idiv(255 * (this._length - 1 - k) * (this._length - 1 - k), (mid * mid))
-                    : Math.idiv(255 * k * k, (mid * mid));
-                const r = (buf[ledoffset + 0] * br) >> 8; buf[ledoffset + 0] = r;
-                const g = (buf[ledoffset + 1] * br) >> 8; buf[ledoffset + 1] = g;
-                const b = (buf[ledoffset + 2] * br) >> 8; buf[ledoffset + 2] = b;
-                if (stride == 4) {
-                    const w = (buf[ledoffset + 3] * br) >> 8; buf[ledoffset + 3] = w;
-                }
-            }
-        }
 
-        /**
-         * Create a range of LEDs.
-         * @param start offset in the LED strip to start the range
-         * @param length number of LEDs in the range. eg: 4
-         */
-        //% weight=89
-        //% blockId="neopixel_range" block="%strip|range from %start|with %length|leds"
-        //% strip.defl=strip
-        //% parts="neopixel"
-        //% blockSetVariable=range
-        range(start: number, length: number): Strip {
-            start = start >> 0;
-            length = length >> 0;
-            let strip = new Strip();
-            strip.buf = this.buf;
-            strip.pin = this.pin;
-            strip.brightness = this.brightness;
-            strip.start = this.start + Math.clamp(0, this._length - 1, start);
-            strip._length = Math.clamp(0, this._length - (strip.start - this.start), length);
-            strip._matrixWidth = 0;
-            strip._mode = this._mode;
-            return strip;
-        }
 
-        /**
-         * Shift LEDs forward and clear with zeros.
-         * You need to call ``show`` to make the changes visible.
-         * @param offset number of pixels to shift forward, eg: 1
-         */
-        //% blockId="neopixel_shift" block="%strip|shift pixels by %offset" blockGap=8
-        //% strip.defl=strip
-        //% weight=40
-        //% parts="neopixel"
-        shift(offset: number = 1): void {
-            offset = offset >> 0;
-            const stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
-            this.buf.shift(-offset * stride, this.start * stride, this._length * stride)
-        }
+
+
 
 
 
@@ -367,25 +297,7 @@ namespace neopixel {
             // don't yield to avoid races on initialization
         }
 
-        /**
-         * Estimates the electrical current (mA) consumed by the current light configuration.
-         */
-        //% weight=9 blockId=neopixel_power block="%strip|power (mA)"
-        //% strip.defl=strip
-        //% advanced=true
-        power(): number {
-            const stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
-            const end = this.start + this._length;
-            let p = 0;
-            for (let i = this.start; i < end; ++i) {
-                const ledoffset = i * stride;
-                for (let j = 0; j < stride; ++j) {
-                    p += this.buf[i + j];
-                }
-            }
-            return Math.idiv(this.length() * 7, 10) /* 0.7mA per neopixel */
-                + Math.idiv(p * 480, 10000); /* rought approximation */
-        }
+
 
         private setBufferRGB(offset: number, red: number, green: number, blue: number): void {
             if (this._mode === NeoPixelMode.RGB_RGB) {
@@ -531,52 +443,4 @@ namespace neopixel {
         return b;
     }
 
-    /**
-     * Converts a hue saturation luminosity value into a RGB color
-     * @param h hue from 0 to 360
-     * @param s saturation from 0 to 99
-     * @param l luminosity from 0 to 99
-     */
-    //% blockId=neopixelHSL block="hue %h|saturation %s|luminosity %l"
-    export function hsl(h: number, s: number, l: number): number {
-        h = Math.round(h);
-        s = Math.round(s);
-        l = Math.round(l);
-
-        h = h % 360;
-        s = Math.clamp(0, 99, s);
-        l = Math.clamp(0, 99, l);
-        let c = Math.idiv((((100 - Math.abs(2 * l - 100)) * s) << 8), 10000); //chroma, [0,255]
-        let h1 = Math.idiv(h, 60);//[0,6]
-        let h2 = Math.idiv((h - h1 * 60) * 256, 60);//[0,255]
-        let temp = Math.abs((((h1 % 2) << 8) + h2) - 256);
-        let x = (c * (256 - (temp))) >> 8;//[0,255], second largest component of this color
-        let r$: number;
-        let g$: number;
-        let b$: number;
-        if (h1 == 0) {
-            r$ = c; g$ = x; b$ = 0;
-        } else if (h1 == 1) {
-            r$ = x; g$ = c; b$ = 0;
-        } else if (h1 == 2) {
-            r$ = 0; g$ = c; b$ = x;
-        } else if (h1 == 3) {
-            r$ = 0; g$ = x; b$ = c;
-        } else if (h1 == 4) {
-            r$ = x; g$ = 0; b$ = c;
-        } else if (h1 == 5) {
-            r$ = c; g$ = 0; b$ = x;
-        }
-        let m = Math.idiv((Math.idiv((l * 2 << 8), 100) - c), 2);
-        let r = r$ + m;
-        let g = g$ + m;
-        let b = b$ + m;
-        return packRGB(r, g, b);
-    }
-
-    export enum HueInterpolationDirection {
-        Clockwise,
-        CounterClockwise,
-        Shortest
-    }
-}
+   
