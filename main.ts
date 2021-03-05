@@ -126,10 +126,11 @@ namespace CO2 {
 
 
     //% block
-    export function foo(n: number, s: string, led1: farbauswahl, led2: farbauswahl, led3: farbauswahl): void {
+    export function foo(n: number, s: string, led1: farbauswahl, led2: farbauswahl, led3: farbauswahl, buf: Buffer): void {
         basic.showString("" + (led1))
         if (led1 == 0){
             //let farb_code2 = 'ffffffffffffffffff';
+            CO2.sendBuffer(buf, DigitalPin.P12)
             //CO2.sendBuffer(hex farb_code3, DigitalPin.P12)
         }
 
