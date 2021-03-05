@@ -1,3 +1,25 @@
+enum NeoPixelColors {
+    //% block=red
+    Red = 0xFF0000,
+    //% block=orange
+    Orange = 0xFFA500,
+    //% block=yellow
+    Yellow = 0xFFFF00,
+    //% block=green
+    Green = 0x00FF00,
+    //% block=blue
+    Blue = 0x0000FF,
+    //% block=indigo
+    Indigo = 0x4b0082,
+    //% block=violet
+    Violet = 0x8a2be2,
+    //% block=purple
+    Purple = 0xFF00FF,
+    //% block=white
+    White = 0xFFFFFF,
+    //% block=black
+    Black = 0x000000
+}
 
 /**
  * CO2 block
@@ -113,12 +135,25 @@ namespace CO2 {
     }
 
 
-    /** ------------------ */
+    /** ------- Anfang RGB LEDs ----------- */
+
+        /**
+         * Set LED to a given color (range 0-255 for r, g, b).
+         * You need to call ``show`` to make the changes visible.
+         * @param pixeloffset position of the NeoPixel in the strip
+         * @param rgb RGB color of the LED
+         */
+        //% blockId="neopixel_set_pixel_color" block="%strip|set pixel color at %pixeloffset|to %rgb=neopixel_colors"
+        //% strip.defl=strip
+        //% blockGap=8
+        //% weight=80
+        //% parts="neopixel" advanced=true
+        setPixelColor(pixeloffset: number, rgb: number): void {
+            this.setPixelRGB(pixeloffset >> 0, rgb >> 0);
+        }
 
 
-
-
-    /** ------------------ */
+    /** -------- Ende RGB LEDs ---------- */
 
 
 
