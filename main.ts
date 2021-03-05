@@ -132,6 +132,7 @@ namespace CO2 {
             //let farb_code2 = 'ffffffffffffffffff';
             //let list: number = 0xff00ff;
             CO2.sendBuffer(hex`000000 000000 000000 000000 000000 000000 000000`, DigitalPin.P12)
+            basic.pause(1000)
             let buf3 = Buffer.fromUTF8("hex `ff0000 00ff00 0000ff ff0000 00ff00 0000ff ff0000`")
             //let temp = Buffer.fromHex("0xffff00ffffff0000ff")
             ////CO2.sendBuffer(buf3, DigitalPin.P12)
