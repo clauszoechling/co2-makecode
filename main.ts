@@ -6,6 +6,7 @@ enum farbauswahl{
         //% block="blau"
         blau
 }
+let farb_code = pins.createBuffer(9);
 
 /**
  * CO2 block
@@ -125,17 +126,13 @@ namespace CO2 {
 
 
     //% block
-    export function foo(n: number, s: string, e: farbauswahl): void {
-        basic.showString("" + (e))
-        if (e == 0){
-            CO2.sendBuffer(hex`ff000000ff000000ff`, DigitalPin.P12)
+    export function foo(n: number, s: string, led1: farbauswahl, led2: farbauswahl, led3: farbauswahl): void {
+        basic.showString("" + (led1))
+        if (led1 == 0){
+            //let farb_code2 = 'ffffffffffffffffff';
+            //CO2.sendBuffer(hex farb_code3, DigitalPin.P12)
         }
-        if (e == 1){
-            CO2.sendBuffer(hex`ffff0000ffffff00ff`, DigitalPin.P12)
-        }
-        if (e == 2){
-            CO2.sendBuffer(hex`ffffffffffffffffff`, DigitalPin.P12)
-        }
+
     }
 
 
