@@ -135,7 +135,7 @@ namespace CO2 {
             CO2.sendBuffer(hex`000000 000000 000000 000000 000000 000000 000000`, DigitalPin.P12)
             basic.pause(1000)
             let var1 = "hex "
-            let var2 = "`000000 000000 000000 000000 000000 000000 000000`"
+            let var2 = "000000 000000 000000 000000 000000 000000 000000"
             let gesamt = var1 + var2
             let versuch = Buffer.fromUTF8("gesamt")
             CO2.sendBuffer(versuch, DigitalPin.P12)
