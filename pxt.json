@@ -4,12 +4,14 @@
     "dependencies": {
         "core": "*",
         "radio": "*",
+        "ws2812b": "github:microsoft/pxt-ws2812b#v0.1.1",
         "microphone": "*"
     },
     "files": [
         "main.ts",
         "sendBuffer.asm",
         "setBufferMode.asm",
+        "neopixel.ts",
         "README.md"
     ],
     "testFiles": [
