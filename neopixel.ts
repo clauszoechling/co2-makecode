@@ -73,7 +73,7 @@ namespace CO2 {
          * @param startHue the start hue value for the rainbow, eg: 1
          * @param endHue the end hue value for the rainbow, eg: 360
          */
-        //% blockId="neopixel_set_strip_rainbow" block="%strip|show rainbow from %startHue|to %endHue"
+       
         //% strip.defl=strip
         //% weight=85 blockGap=8
         //% parts="neopixel"
