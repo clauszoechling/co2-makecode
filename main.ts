@@ -143,7 +143,7 @@ namespace CO2 {
     //% group="LEDs2"
     /*export function sendBuffer(buf: farbauswahl, pin: DigitalPin) {
     }*/
-    export function Farben(auswahl: farbauswahl, pin: DigitalPin):void {
+    export function Farben(auswahl: farbauswahl, pin: DigitalPin) {
         //if (auswahl = 1){
             //basic.showIcon(IconNames.Heart)
             //CO2.sendBuffer(hex`ffffff ffffff ffffff`, DigitalPin.P12)
