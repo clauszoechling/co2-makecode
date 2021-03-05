@@ -131,13 +131,20 @@ namespace CO2 {
         if (led1 == 0){
             //let farb_code2 = 'ffffffffffffffffff';
             //let list: number = 0xff00ff;
+
             CO2.sendBuffer(hex`000000 000000 000000 000000 000000 000000 000000`, DigitalPin.P12)
             basic.pause(1000)
-            let test = 0xff00ff
+            let var1 = "hex "
+            let var2 = "`ff0000 000000 000000 000000 000000 000000 000000`"
+            let gesamt = var1 + var2
+            let versuch = Buffer.fromUTF8("gesamt")
+            CO2.sendBuffer(versuch, DigitalPin.P12)
+            basic.pause(3000)
+ 
             //let buf3 = Buffer.fromUTF8("hex `3`")
-            let temp = Buffer.fromUTF8("hex`1 2 3`")
-            CO2.sendBuffer(temp, DigitalPin.P12)
-            basic.pause(5000)
+            ////let temp = Buffer.fromUTF8("hex`1 2 3`")
+            ////CO2.sendBuffer(temp, DigitalPin.P12)
+            ////basic.pause(5000)
             //CO2.sendBuffer("hex + ` + list + ` ", DigitalPin.P12)
             //CO2.sendBuffer(hex farb_code3, DigitalPin.P12)
         }
