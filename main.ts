@@ -146,6 +146,8 @@ namespace CO2 {
         }
     }
 
+    return CO2_Werte_sortiert[2]
+
     }
 
 
