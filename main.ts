@@ -3,7 +3,7 @@
 /**
  * CO2 block
  */
-//%color=#FFA609 icon="\uf185" block="CO2"
+//%color=#FF8409 icon="\uf185" block="CO2"
 //% groups="['CO2', ,'LEDs', 'WIFI']"
 
 namespace CO2 {
