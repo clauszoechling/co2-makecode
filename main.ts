@@ -113,6 +113,9 @@ namespace CO2 {
         return co2
     }
 
+
+    /** ------- Anfang Funktionen ----------- */
+
     //% block="show number2 $n"
     //% weight=7
     //% group="Funktionen"
@@ -120,9 +123,6 @@ namespace CO2 {
         writeNum(n)
         newLine()
     }
-
-
-    /** ------- Anfang Funktionen ----------- */
 
     //% block="addiere CO2 $CO2"
     //% group="CO2"
