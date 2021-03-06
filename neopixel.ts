@@ -539,7 +539,7 @@ namespace CO2 {
      * Gets the RGB value of a known color
     */
     //% weight=2 blockGap=8
-    //% blockId="neopixel_colors" block="%color"
+    
     //% subcategory="LEDs"
     //% group="LEDs"
     
