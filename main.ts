@@ -119,13 +119,6 @@ namespace CO2 {
     //% block="show number2 $n"
     //% weight=7
     //% group="Funktionen"
-    export function writeNumNewLine2(n: number) {
-        writeNum(n)
-        newLine()
-    }
-
-    //% block="addiere CO2 $CO2"
-    //% group="CO2"
     let CO2_Werte_zeitlich = [400,400,400,400,400];
     export function addiereCO2(CO2: number) {
         for (let Index = 0; Index <= 3; Index++) {
@@ -133,6 +126,9 @@ namespace CO2 {
         }
         CO2_Werte_zeitlich.insertAt(4, CO2)
     }
+
+
+
 
     /** -------- Ende Funktionen ---------- */
 
