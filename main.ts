@@ -115,8 +115,7 @@ namespace CO2 {
 
     //% block="show number2 $n"
     //% weight=7
-    
-    //% group="CO2"
+    //% group="Funktionen"
     export function writeNumNewLine2(n: number) {
         writeNum(n)
         newLine()
