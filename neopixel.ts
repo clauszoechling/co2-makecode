@@ -363,6 +363,8 @@ let font: Buffer;
     //% width.defl=128
     //% height.defl=64
     //% weight=9
+    //% subcategory="Display"
+    //% group="Display"
     export function init(width: number, height: number) {
         command(SSD1306_DISPLAYOFF);
         command(SSD1306_SETDISPLAYCLOCKDIV);
