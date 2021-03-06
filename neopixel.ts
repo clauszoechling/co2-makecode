@@ -248,6 +248,8 @@ namespace CO2 {
         //% strip.defl=strip
         //% weight=79
         //% parts="neopixel"
+        //% subcategory="LEDs"
+        //% group="LEDs"
         show() {
             // only supported in beta
             // ws2812b.setBufferMode(this.pin, this._mode);
