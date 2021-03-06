@@ -542,6 +542,7 @@ namespace CO2 {
     //% subcategory="LEDs"
     //% group="LEDs"
     //% blockId="neopixel_colors" block="%color"
+    //% blockHidden=true
     export function colors(color: NeoPixelColors): number {
         return color;
     }
