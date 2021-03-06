@@ -112,7 +112,7 @@ namespace CO2 {
     //% blockId=read_CO2
     //% group="CO2"
     export function readCO2(): number{
-        return co2
+        return Math.round(co2)
     }
 
 
@@ -127,7 +127,7 @@ namespace CO2 {
         for (let Index = 0; Index <= 3; Index++) {
             CO2_Werte_zeitlich[Index] = CO2_Werte_zeitlich[Index + 1]
         }
-        CO2_Werte_zeitlich.insertAt(4, co2)
+        CO2_Werte_zeitlich.insertAt(4, Math.round(co2))
         
     //kopiere
     for (let Index = 0; Index <= 4; Index++) {
