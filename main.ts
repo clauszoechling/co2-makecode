@@ -107,17 +107,19 @@ namespace CO2 {
      */
     //% weight=87 blockGap=20
     //% block="CO2 Wert"
-    //% blockId=read_CO2_2
-    //% group="CO2"
-    export function readCO2_2(): number{
-        return co2
-    }
-
-        //% block="CO2 Wert"
     //% blockId=read_CO2
     //% group="CO2"
     export function readCO2(): number{
         return co2
+    }
+
+    //% block="show number2 $n"
+    //% weight=7
+    //% subcategory="Display"
+    //% group="Display"
+    export function writeNumNewLine2(n: number) {
+        writeNum(n)
+        newLine()
     }
 
 
