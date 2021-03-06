@@ -115,8 +115,8 @@ namespace CO2 {
 
     //% block="show number2 $n"
     //% weight=7
-    //% subcategory="Display"
-    //% group="Display"
+    
+    //% group="CO2"
     export function writeNumNewLine2(n: number) {
         writeNum(n)
         newLine()
