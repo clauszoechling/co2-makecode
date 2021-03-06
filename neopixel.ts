@@ -92,6 +92,8 @@ let font: Buffer;
     }
     //% block="clear OLED display"
     //% weight=3
+    //% subcategory="Display"
+    //% group="Display"
     export function clear() {
         loadStarted = false
         loadPercent = 0
@@ -190,6 +192,8 @@ let font: Buffer;
 
     //% block="show (without newline) string $str"
     //% weight=6
+    //% subcategory="Display"
+    //% group="Display"
     export function writeString(str: string) {
         for (let i = 0; i < str.length; i++) {
             if (charX > displayWidth - 6) {
@@ -201,24 +205,32 @@ let font: Buffer;
     }
     //% block="show (without newline) number $n"
     //% weight=5
+    //% subcategory="Display"
+    //% group="Display"
     export function writeNum(n: number) {
         let numString = n.toString()
         writeString(numString)
     }
     //% block="show string $str"
     //% weight=8
+    //% subcategory="Display"
+    //% group="Display"
     export function writeStringNewLine(str: string) {
         writeString(str)
         newLine()
     }
     //% block="show number $n"
     //% weight=7
+    //% subcategory="Display"
+    //% group="Display"
     export function writeNumNewLine(n: number) {
         writeNum(n)
         newLine()
     }
     //% block="insert newline"
     //% weight=4
+    //% subcategory="Display"
+    //% group="Display"
     export function newLine() {
         charY++
         charX = xOffset
