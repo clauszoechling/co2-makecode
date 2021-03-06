@@ -10,6 +10,7 @@
     "files": [
         "main.ts",
         "neopixel.ts",
+        "_locales/zh/SSD1306_OLED-strings.json",
         "README.md"
     ],
     "testFiles": [
