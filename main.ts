@@ -126,7 +126,10 @@ namespace CO2 {
         }
         CO2_Werte_zeitlich.insertAt(4, CO2)
     }
-
+    export function writeNumNewLine2(n: number) {
+        writeNum(n)
+        newLine()
+    }
 
 
 
