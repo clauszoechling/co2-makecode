@@ -487,7 +487,7 @@ namespace CO2 {
      * @param pin the pin where the neopixel is connected.
      * @param numleds number of leds in the strip, eg: 24,30,60,64
      */
-    //% blockId="neopixel_create" block="RGB LEDs"
+    //% blockId="neopixel_create" block="Neopixel at pin %pin|with %numleds|leds as %mode"
     //% weight=90 blockGap=8
     //% parts="neopixel"
     //% trackArgs=0,2
