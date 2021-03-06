@@ -116,7 +116,7 @@ namespace CO2 {
 
     /** ------- Anfang Funktionen ----------- */
 
-    //% block="show number2 $CO2"
+    //% block="addiere CO2 $CO2"
     //% weight=7
     //% group="Funktionen"
 
