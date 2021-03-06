@@ -120,8 +120,8 @@ namespace CO2 {
     //% weight=7
     //% group="Funktionen"
 
-    export function writeNumNewLine2(n: number) {
-        writeNum(n)
+    export function writeNumNewLine2(CO2: number) {
+        writeNum(CO2)
         newLine()
     }
 
