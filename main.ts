@@ -118,16 +118,16 @@ namespace CO2 {
 
     /** ------- Anfang Funktionen ----------- */
 
-    //% block="berechne CO2 Median $CO2"
+    //% block="berechne CO2 Median"
     //% weight=7
     //% group="Funktionen"
 
-    export function writeNumNewLine2(CO2: number) {
+    export function writeNumNewLine2() {
         //addiere
         for (let Index = 0; Index <= 3; Index++) {
             CO2_Werte_zeitlich[Index] = CO2_Werte_zeitlich[Index + 1]
         }
-        CO2_Werte_zeitlich.insertAt(4, CO2)
+        CO2_Werte_zeitlich.insertAt(4, co2)
         
     //kopiere
     for (let Index = 0; Index <= 4; Index++) {
