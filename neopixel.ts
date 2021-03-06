@@ -541,7 +541,7 @@ namespace CO2 {
     //% weight=2 blockGap=8
     
 
-    //% blockId="neopixel_colors" block="%color"
+    //% blockId="neopixel_colors" 
     export function colors(color: NeoPixelColors): number {
         return color;
     }
