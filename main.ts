@@ -136,7 +136,7 @@ namespace CO2 {
 
 
     //sortiere
-    /*for (let k = 0; k <= 4; k++) {
+    for (let k = 0; k <= 4; k++) {
         for (let i = 0; i <= 3 - k; i++) {
             if (CO2_Werte_sortiert[i] > CO2_Werte_sortiert[i + 1]) {
                 temp = CO2_Werte_sortiert[i]
@@ -144,7 +144,7 @@ namespace CO2 {
                 CO2_Werte_sortiert[i + 1] = temp
             }
         }
-    }*/
+    }
 
     //return CO2_Werte_sortiert[2]
 
