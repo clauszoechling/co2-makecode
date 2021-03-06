@@ -114,11 +114,21 @@ namespace CO2 {
     }
 
 
-    /** ------- Anfang RGB LEDs ----------- */
+    /** ------- Anfang Funktionen ----------- */
 
+    //% block="addiere CO2 $CO2"
+    //% weight=7
+    //% subcategory="CO2"
+    //% group="Funktionen"
+    let CO2_Werte_zeitlich = [400,400,400,400,400];
+    export function addiereCO2(CO2: number) {
+        for (let Index = 0; Index <= 3; Index++) {
+            CO2_Werte_zeitlich[Index] = CO2_Werte_zeitlich[Index + 1]
+        }
+        CO2_Werte_zeitlich.insertAt(4, CO2)
+    }
 
-
-    /** -------- Ende RGB LEDs ---------- */
+    /** -------- Ende Funktionen ---------- */
 
 
 
