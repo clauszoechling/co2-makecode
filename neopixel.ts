@@ -176,6 +176,7 @@ let font: Buffer;
     //% block="draw loading bar at $percent percent"
     //% percent.min=0 percent.max=100
     //% weight=2
+    //% blockHidden=true
     export function drawLoading(percent: number) {
         if (loadStarted) {
             drawLoadingBar(percent)
@@ -297,6 +298,7 @@ let font: Buffer;
     //% x1.defl=20
     //% y1.defl=20
     //% weight=1
+    //% blockHidden=true
     export function drawLine(x0: number, y0: number, x1: number, y1: number) {
         let pixels: Array<Array<number>> = []
         let kx: number, ky: number, c: number, i: number, xx: number, yy: number, dx: number, dy: number;
@@ -338,6 +340,7 @@ let font: Buffer;
     //% x1.defl=20
     //% y1.defl=20
     //% weight=0
+    //% blockHidden=true
     export function drawRectangle(x0: number, y0: number, x1: number, y1: number) {
         drawLine(x0, y0, x1, y0)
         drawLine(x0, y1, x1, y1)
