@@ -118,8 +118,8 @@ namespace CO2 {
 
     //% block="addiere CO2 $CO2"
     //% weight=7
-    //% subcategory="CO2"
-    //% group="Funktionen"
+    //% subcategory="Funktionen"
+    //% group="CO2"
     let CO2_Werte_zeitlich = [400,400,400,400,400];
     export function addiereCO2(CO2: number) {
         for (let Index = 0; Index <= 3; Index++) {
