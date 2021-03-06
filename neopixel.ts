@@ -499,9 +499,8 @@ namespace CO2 {
     //% pin.defl=DigitalPin.P12
     //% numleds.defl=7
     //% mode.defl=NeoPixelMode.RGB_RGB
-    //let pin = 12;
-    //let numleds = 7;
-    //let mode = 0;
+    //% subcategory="LEDs"
+    //% group="LEDs"
     export function create(pin: DigitalPin,numleds: number,mode: NeoPixelMode): Strip {
         let strip = new Strip();
         let stride = mode === NeoPixelMode.RGBW ? 4 : 3;
