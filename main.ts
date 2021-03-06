@@ -118,7 +118,7 @@ namespace CO2 {
 
     /** ------- Anfang Funktionen ----------- */
 
-    //% block="addiere CO2 $CO2"
+    //% block="berechne CO2 Median $CO2"
     //% weight=7
     //% group="Funktionen"
 
