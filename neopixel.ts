@@ -497,11 +497,11 @@ namespace CO2 {
         let stride = mode === NeoPixelMode.RGBW ? 4 : 3;
         strip.buf = pins.createBuffer(numleds * stride);
         strip.start = 0;
-        strip._length = numleds;
+        strip._length = 7;  //numleds
         strip._mode = mode || NeoPixelMode.RGB;
         strip._matrixWidth = 0;
         strip.setBrightness(128)
-        strip.setPin(pin)
+        strip.setPin(12)  //pin
         return strip;
     }
 
