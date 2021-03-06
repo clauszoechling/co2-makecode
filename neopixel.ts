@@ -44,6 +44,8 @@ namespace CO2 {
     /**
      * A NeoPixel strip
      */
+
+    
     export class Strip {
         buf: Buffer;
         pin: DigitalPin;
@@ -492,6 +494,8 @@ namespace CO2 {
     //% parts="neopixel"
     //% trackArgs=0,2
     //% blockSetVariable=strip
+    //% pin.defl=DigitalPin.P12
+    //% numleds.defl=7
     //let pin = 12;
     //let numleds = 7;
     //let mode = 0;
