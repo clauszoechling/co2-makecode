@@ -64,6 +64,8 @@ namespace CO2 {
         //% strip.defl=strip
         //% weight=85 blockGap=8
         //% parts="neopixel"
+        //% subcategory="LEDs"
+        //% group="LEDs"
         showColor(rgb: number) {
             rgb = rgb >> 0;
             this.setAllRGB(rgb);
@@ -186,6 +188,8 @@ namespace CO2 {
         //% blockGap=8
         //% weight=80
         //% parts="neopixel" 
+        //% subcategory="LEDs"
+        //% group="LEDs"
         setPixelColor(pixeloffset: number, rgb: number): void {
             this.setPixelRGB(pixeloffset >> 0, rgb >> 0);
         }
@@ -264,6 +268,8 @@ namespace CO2 {
         //% strip.defl=strip
         //% weight=76
         //% parts="neopixel"
+        //% subcategory="LEDs"
+        //% group="LEDs"
         clear(): void {
             const stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
             this.buf.fill(0, this.start * stride, this._length * stride);
@@ -286,7 +292,9 @@ namespace CO2 {
         //% blockId="neopixel_set_brightness" block="%strip|set brightness %brightness" blockGap=8
         //% strip.defl=strip
         //% weight=59
-        //% parts="neopixel" advanced=true
+        //% parts="neopixel"
+        //% subcategory="LEDs"
+        //% group="LEDs"
         setBrightness(brightness: number): void {
             this.brightness = brightness & 0xff;
         }
@@ -532,6 +540,8 @@ namespace CO2 {
     */
     //% weight=2 blockGap=8
     //% blockId="neopixel_colors" block="%color"
+    //% subcategory="LEDs"
+    //% group="LEDs"
     
     export function colors(color: NeoPixelColors): number {
         return color;
