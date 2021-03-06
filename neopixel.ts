@@ -487,7 +487,7 @@ namespace CO2 {
      * @param pin the pin where the neopixel is connected.
      * @param numleds number of leds in the strip, eg: 24,30,60,64
      */
-    //% blockId="neopixel_create" block="NeoPixel at pin %pin|with %numleds|leds as %mode"
+    //% blockId="neopixel_create" block="NeoPixel leds as %mode"
     //% weight=90 blockGap=8
     //% parts="neopixel"
     //% trackArgs=0,2
@@ -495,7 +495,7 @@ namespace CO2 {
     export function create(pin: 12, numleds: 7, mode: NeoPixelMode): Strip {
         let strip = new Strip();
         let stride = mode === NeoPixelMode.RGBW ? 4 : 3;
-        strip.buf = pins.createBuffer(numleds * stride);
+        strip.buf = pins.createBuffer(7 * stride);  //numleds
         strip.start = 0;
         strip._length = 7;  //numleds
         strip._mode = mode || NeoPixelMode.RGB;
