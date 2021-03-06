@@ -117,8 +117,6 @@ namespace CO2 {
     /** ------- Anfang Funktionen ----------- */
 
     //% block="addiere CO2 $CO2"
-    //% weight=7
-    //% subcategory="Funktionen"
     //% group="CO2"
     let CO2_Werte_zeitlich = [400,400,400,400,400];
     export function addiereCO2(CO2: number) {
