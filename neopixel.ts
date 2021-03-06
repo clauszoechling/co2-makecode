@@ -32,7 +32,7 @@ enum NeoPixelMode {
     RGB = 1,
     //% block="RGB+W"
     RGBW = 2,
-    //% block="RGB (RGB format)"
+    //% block="RGB"
     RGB_RGB = 3
 }
 
@@ -496,6 +496,7 @@ namespace CO2 {
     //% blockSetVariable=strip
     //% pin.defl=DigitalPin.P12
     //% numleds.defl=7
+    //% mode.defl=NeoPixelMode.RGB_RGB
     //let pin = 12;
     //let numleds = 7;
     //let mode = 0;
