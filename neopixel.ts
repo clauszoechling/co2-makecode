@@ -30,6 +30,8 @@ enum NeoPixelColors {
 enum NeoPixelMode {
     //% block="RGB (GRB format)"
     RGB = 1,
+    RGBW = 2,
+    RGB_RGB = 3
 }
 
 /**
