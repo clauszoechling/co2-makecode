@@ -492,10 +492,10 @@ namespace CO2 {
     //% parts="neopixel"
     //% trackArgs=0,2
     //% blockSetVariable=strip
-    let pin = 12;
-    let numleds = 7;
-    let mode = 0;
-    export function create(pin: 12,numleds: 7,mode: 0): Strip {
+    //let pin = 12;
+    //let numleds = 7;
+    //let mode = 0;
+    export function create(pin: DigitalPin,numleds: number,mode: NeoPixelMode): Strip {
         let strip = new Strip();
         let stride = mode === NeoPixelMode.RGBW ? 4 : 3;
         strip.buf = pins.createBuffer(7 * stride);  //numleds
