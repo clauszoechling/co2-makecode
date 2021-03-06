@@ -540,9 +540,8 @@ namespace CO2 {
     */
     //% weight=2 blockGap=8
     
-    //% subcategory="LEDs"
-    //% group="LEDs"
-    //% blockId="neopixel_colors" 
+
+    //% blockId="neopixel_colors" block="%color"
     export function colors(color: NeoPixelColors): number {
         return color;
     }
