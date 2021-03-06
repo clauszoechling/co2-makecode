@@ -6,6 +6,8 @@
 //%color=#FF8409 icon="\uf185" block="CO2"
 //% groups="['CO2', ,'LEDs', 'WIFI', 'Display']"
 
+let CO2_Werte_zeitlich = [400,400,400,400,400]
+
 namespace CO2 {
     
     let co2: number = 0
@@ -121,6 +123,9 @@ namespace CO2 {
     //% group="Funktionen"
 
     export function writeNumNewLine2(CO2: number) {
+    for (let Index = 0; Index <= 3; Index++) {
+        CO2_Werte_zeitlich[Index] = CO2_Werte_zeitlich[Index + 1]
+    }
         writeNum(CO2)
         newLine()
     }
