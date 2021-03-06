@@ -1,4 +1,6 @@
 let CO2_Werte_zeitlich = [400,400,400,400,400]
+let CO2_Werte_sortiert = [400,400,400,400,400]
+let temp = 400
 
 /**
  * CO2 block
@@ -121,11 +123,29 @@ namespace CO2 {
     //% group="Funktionen"
 
     export function writeNumNewLine2(CO2: number) {
-    for (let Index = 0; Index <= 3; Index++) {
-        CO2_Werte_zeitlich[Index] = CO2_Werte_zeitlich[Index + 1]
-    }
-    CO2_Werte_zeitlich.insertAt(4, CO2)
+        //addiere
+        for (let Index = 0; Index <= 3; Index++) {
+            CO2_Werte_zeitlich[Index] = CO2_Werte_zeitlich[Index + 1]
+        }
+        CO2_Werte_zeitlich.insertAt(4, CO2)
         
+    //kopiere
+    for (let Index = 0; Index <= 4; Index++) {
+            CO2_Werte_sortiert.insertAt(Index, CO2_Werte_zeitlich[Index])
+        }
+
+
+    //sortiere
+    for (let k = 0; k <= 4; k++) {
+        for (let i = 0; i <= 3 - k; i++) {
+            if (CO2_Werte_sortiert[i] > CO2_Werte_sortiert[i + 1]) {
+                temp = CO2_Werte_sortiert[i]
+                CO2_Werte_sortiert[i] = CO2_Werte_sortiert[i + 1]
+                CO2_Werte_sortiert[i + 1] = temp
+            }
+        }
+    }
+
     }
 
 
