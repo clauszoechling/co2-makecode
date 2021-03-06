@@ -186,6 +186,7 @@ namespace CO2 {
     //% delay.min=0 delay.defl=5000
     //% subcategory="WIFI"
     //% group="WIFI"
+    //% blockHidden=true
     export function wait(delay: number) {
         if (delay > 0) basic.pause(delay)
     }
@@ -216,6 +217,7 @@ namespace CO2 {
     //% block="Last data upload successful ?"
     //% subcategory="WIFI"
     //% group="WIFI"
+    //% blockHidden=true
     export function isLastUploadSuccessful() {
         return last_upload_successful
     }
