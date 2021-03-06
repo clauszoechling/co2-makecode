@@ -4,7 +4,7 @@
  * CO2 block
  */
 //%color=#FF8409 icon="\uf185" block="CO2"
-//% groups="['CO2', ,'LEDs', 'WIFI']"
+//% groups="['CO2', ,'LEDs', 'WIFI', 'Display']"
 
 namespace CO2 {
     
