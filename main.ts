@@ -160,7 +160,7 @@ namespace CO2 {
     /**
     * Initialize ESP8266 module and connect it to Wifi router
     */
-    //% block="Initialize ESP8266|RX (Tx of micro:bit) %tx|TX (Rx of micro:bit) %rx|Baud rate %baudrate|Wifi SSID = %ssid|Wifi PW = %pw"
+    //% block="Initialisiere ESP8266|RX (Tx of micro:bit) %tx|TX (Rx of micro:bit) %rx|Baud rate %baudrate|Wifi SSID = %ssid|Wifi PW = %pw"
     //% tx.defl=SerialPin.P1
     //% rx.defl=SerialPin.P2
     //% ssid.defl=your_ssid
@@ -188,7 +188,7 @@ namespace CO2 {
     /**
     * Connect to ThingSpeak and upload data. It would not upload anything if it failed to connect to Wifi or ThingSpeak.
     */
-    //% block="Upload data to ThingSpeak|URL/IP = %ip|Write API key = %write_api_key|Feld %field|Data = %data"
+    //% block="Upload Daten auf ThingSpeak|URL/IP = %ip|Write API key = %write_api_key|Feld %field|Data = %data"
     //% ip.defl=api.thingspeak.com
     //% write_api_key.defl=your_write_api_key
     //% subcategory="WIFI"
@@ -216,7 +216,7 @@ namespace CO2 {
     /**
     * Wait between uploads
     */
-    //% block="Wait %delay ms"
+    //% block="Warte %delay ms"
     //% delay.min=0 delay.defl=5000
     //% subcategory="WIFI"
     //% group="WIFI"
@@ -228,7 +228,7 @@ namespace CO2 {
     /**
     * Check if ESP8266 successfully connected to Wifi
     */
-    //% block="Wifi connected ?"
+    //% block="Wifi verbunden ?"
     //% subcategory="WIFI"
     //% group="WIFI"
     export function isWifiConnected() {
@@ -238,7 +238,7 @@ namespace CO2 {
     /**
     * Check if ESP8266 successfully connected to ThingSpeak
     */
-    //% block="ThingSpeak connected ?"
+    //% block="ThingSpeak verbunden ?"
     //% subcategory="WIFI"
     //% group="WIFI"
     export function isThingSpeakConnected() {
