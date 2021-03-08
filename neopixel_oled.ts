@@ -190,7 +190,7 @@ let font: Buffer;
     }
 
 
-    //% block="show (without newline) string $str"
+    //% block="zeige (ohne Zeilenumbruch) Text $str"
     //% weight=6
     //% subcategory="Display"
     //% group="Display"
@@ -203,7 +203,7 @@ let font: Buffer;
             charX += 6
         }
     }
-    //% block="show (without newline) number $n"
+    //% block="zeige (ohne Zeilenumbruch) Zahl $n"
     //% weight=5
     //% subcategory="Display"
     //% group="Display"
@@ -219,7 +219,7 @@ let font: Buffer;
         writeString(str)
         newLine()
     }
-    //% block="show number $n"
+    //% block="zeige Zahl $n"
     //% weight=7
     //% subcategory="Display"
     //% group="Display"
@@ -227,7 +227,7 @@ let font: Buffer;
         writeNum(n)
         newLine()
     }
-    //% block="insert newline"
+    //% block="Zeilenumbruch"
     //% weight=4
     //% subcategory="Display"
     //% group="Display"
@@ -359,7 +359,7 @@ let font: Buffer;
         drawLine(x0, y0, x0, y1)
         drawLine(x1, y0, x1, y1)
     }
-    //% block="initialize OLED with width $width height $height"
+    //% block="Initialisiere OLED width $width height $height"
     //% width.defl=128
     //% height.defl=64
     //% weight=9
@@ -869,7 +869,7 @@ let font: Buffer;
         /**
          * Send all the changes to the strip.
          */
-        //% blockId="neopixel_show" block="%strip|show" blockGap=8
+        //% blockId="neopixel_show" block="%strip|zeige" blockGap=8
         //% strip.defl=strip
         //% weight=79
         //% parts="neopixel"
