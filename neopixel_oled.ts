@@ -885,7 +885,7 @@ let font: Buffer;
          * Turn off all LEDs.
          * You need to call ``show`` to make the changes visible.
          */
-        //% blockId="neopixel_clear" block="%strip|clear"
+        //% blockId="neopixel_clear" block="%strip|löschen"
         //% strip.defl=strip
         //% weight=76
         //% parts="neopixel"
@@ -910,7 +910,7 @@ let font: Buffer;
          * Set the brightness of the strip. This flag only applies to future operation.
          * @param brightness a measure of LED brightness in 0-255. eg: 255
          */
-        //% blockId="neopixel_set_brightness" block="%strip|set brightness %brightness" blockGap=8
+        //% blockId="neopixel_set_brightness" block="%strip|setze Helligkeit %brightness" blockGap=8
         //% strip.defl=strip
         //% weight=59
         //% parts="neopixel"
@@ -1120,7 +1120,7 @@ let font: Buffer;
      * @param pin the pin where the neopixel is connected.
      * @param numleds number of leds in the strip, eg: 24,30,60,64
      */
-    //% blockId="neopixel_create" block="Neopixel at pin %pin|with %numleds|leds as %mode"
+    //% blockId="neopixel_create" block="Neopixel Pin %pin|with %numleds|LEDs als %mode"
     //% weight=90 blockGap=8
     //% parts="neopixel"
     //% trackArgs=0,2
