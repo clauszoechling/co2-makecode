@@ -6,7 +6,7 @@
   "OLED.init|block": "initialize OLED with width $width height $height",
   "OLED.newLine|block": "insert newline",
   "OLED.writeNumNewLine|block": "show number $n",
-  "OLED.writeNum|block": "show (without newline) number $n",
+  "OLED.writeNum|block": "show (ohne newline) number $n",
   "OLED.writeStringNewLine|block": "show string $str",
   "OLED.writeString|block": "show (without newline) string $str",
   "{id:category}Math": "Math",
