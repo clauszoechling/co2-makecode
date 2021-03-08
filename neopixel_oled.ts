@@ -211,7 +211,7 @@ let font: Buffer;
         let numString = n.toString()
         writeString(numString)
     }
-    //% block="show string $str"
+    //% block="zeige Text $str"
     //% weight=8
     //% subcategory="Display"
     //% group="Display"
@@ -681,7 +681,7 @@ let font: Buffer;
          * Shows all LEDs to a given color (range 0-255 for r, g, b).
          * @param rgb RGB color of the LED
          */
-        //% blockId="neopixel_set_strip_color" block="%strip|show color %rgb=neopixel_colors"
+        //% blockId="neopixel_set_strip_color" block="%strip|zeige alle LEDs %rgb=neopixel_colors"
         //% strip.defl=strip
         //% weight=85 blockGap=8
         //% parts="neopixel"
@@ -804,7 +804,7 @@ let font: Buffer;
          * @param pixeloffset position of the NeoPixel in the strip
          * @param rgb RGB color of the LED
          */
-        //% blockId="neopixel_set_pixel_color" block="%strip|set pixel color at %pixeloffset|to %rgb=neopixel_colors"
+        //% blockId="neopixel_set_pixel_color" block="%strip|Setze Pixelfarbe für LED %pixeloffset|any %rgb=neopixel_colors"
         //% strip.defl=strip
         //% blockGap=8
         //% weight=80
