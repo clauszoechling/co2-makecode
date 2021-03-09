@@ -804,7 +804,7 @@ let font: Buffer;
          * @param pixeloffset position of the NeoPixel in the strip
          * @param rgb RGB color of the LED
          */
-        //% blockId="neopixel_set_pixel_color" block="%strip|Setze Pixelfarbe für LED %pixeloffset|any %rgb=neopixel_colors"
+        //% blockId="neopixel_set_pixel_color" block="%strip|Setze Pixelfarbe für LED %pixeloffset|auf %rgb=neopixel_colors"
         //% strip.defl=strip
         //% blockGap=8
         //% weight=80
