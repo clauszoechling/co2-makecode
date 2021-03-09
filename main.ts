@@ -188,7 +188,7 @@ namespace CO2 {
     /**
     * Connect to ThingSpeak and upload data. It would not upload anything if it failed to connect to Wifi or ThingSpeak.
     */
-    //% block="Upload Daten auf ThingSpeak|URL/IP = %ip|Write API key = %write_api_key|Feld %field|Kanal = %data"
+    //% block="Upload Daten auf ThingSpeak|URL/IP = %ip|Write API key = %write_api_key|Wert %field|Kanal = %data"
     //% ip.defl=api.thingspeak.com
     //% write_api_key.defl=your_write_api_key
     //% subcategory="WIFI"
