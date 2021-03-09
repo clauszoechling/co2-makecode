@@ -90,7 +90,7 @@ let font: Buffer;
         buf[1] = cmd
         pins.i2cWriteBuffer(chipAdress, buf, false)
     }
-    //% block="clear OLED display"
+    //% block="lösche OLED display"
     //% weight=3
     //% subcategory="Display"
     //% group="Display"
