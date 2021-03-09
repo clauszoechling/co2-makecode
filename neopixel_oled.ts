@@ -1120,7 +1120,7 @@ let font: Buffer;
      * @param pin the pin where the neopixel is connected.
      * @param numleds number of leds in the strip, eg: 24,30,60,64
      */
-    //% blockId="neopixel_create" block="Neopixel Pin %pin|with %numleds|LEDs als %mode"
+    //% blockId="neopixel_create" block="Neopixel Pin %pin|mit %numleds|LEDs als %mode"
     //% weight=90 blockGap=8
     //% parts="neopixel"
     //% trackArgs=0,2
