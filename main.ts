@@ -121,30 +121,30 @@ namespace CO2 {
     //% block="berechne CO2 Median"
     //% weight=7
     //% group="Funktionen"
-
+    let Indexa = 0;
     export function writeNumNewLine2() {
         //addiere
-        for (let Index = 0; Index <= 3; Index++) {
-            CO2_Werte_zeitlich[Index] = CO2_Werte_zeitlich[Index + 1]
+        for (Indexa = 0; Indexa <= 3; Indexa++) {
+            CO2_Werte_zeitlich[Indexa] = CO2_Werte_zeitlich[Indexa + 1]
         }
         CO2_Werte_zeitlich.insertAt(4, Math.round(co2))
         
-    //kopiere
-    for (let Index = 0; Index <= 4; Index++) {
+        //kopiere
+        for (let Index = 0; Index <= 4; Index++) {
             CO2_Werte_sortiert.insertAt(Index, CO2_Werte_zeitlich[Index])
         }
 
 
-    //sortiere
-    for (let k = 0; k <= 4; k++) {
-        for (let i = 0; i <= 3 - k; i++) {
-            if (CO2_Werte_sortiert[i] > CO2_Werte_sortiert[i + 1]) {
-                temp = CO2_Werte_sortiert[i]
-                CO2_Werte_sortiert[i] = CO2_Werte_sortiert[i + 1]
-                CO2_Werte_sortiert[i + 1] = temp
+        //sortiere
+        for (let k = 0; k <= 4; k++) {
+            for (let i = 0; i <= 3 - k; i++) {
+                if (CO2_Werte_sortiert[i] > CO2_Werte_sortiert[i + 1]) {
+                    temp = CO2_Werte_sortiert[i]
+                    CO2_Werte_sortiert[i] = CO2_Werte_sortiert[i + 1]
+                    CO2_Werte_sortiert[i + 1] = temp
+                }
             }
         }
-    }
 
     return CO2_Werte_sortiert[2]
 
