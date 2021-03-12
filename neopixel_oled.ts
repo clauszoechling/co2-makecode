@@ -90,7 +90,7 @@ let font: Buffer;
         buf[1] = cmd
         pins.i2cWriteBuffer(chipAdress, buf, false)
     }
-    //% block="lösche OLED display"
+    //% block="clear OLED display"
     //% weight=3
     //% subcategory="Display"
     //% group="Display"
@@ -804,7 +804,7 @@ let font: Buffer;
          * @param pixeloffset position of the NeoPixel in the strip
          * @param rgb RGB color of the LED
          */
-        //% blockId="neopixel_set_pixel_color" block="%strip|Setze Pixelfarbe für LED %pixeloffset|auf %rgb=neopixel_colors"
+        //% blockId="neopixel_set_pixel_color" block="%strip|Setze Pixelfarbe für LED %pixeloffset|any %rgb=neopixel_colors"
         //% strip.defl=strip
         //% blockGap=8
         //% weight=80
@@ -894,7 +894,6 @@ let font: Buffer;
         clear(): void {
             const stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
             this.buf.fill(0, this.start * stride, this._length * stride);
-            ws2812b.sendBuffer(this.buf, this.pin);  // ergaenzt, damit nach dem Loeschen -> "nichts" angezeigt
         }
 
         /**
@@ -1121,7 +1120,7 @@ let font: Buffer;
      * @param pin the pin where the neopixel is connected.
      * @param numleds number of leds in the strip, eg: 24,30,60,64
      */
-    //% blockId="neopixel_create" block="Neopixel Pin %pin|mit %numleds|LEDs als %mode"
+    //% blockId="neopixel_create" block="Neopixel Pin %pin|with %numleds|LEDs als %mode"
     //% weight=90 blockGap=8
     //% parts="neopixel"
     //% trackArgs=0,2
