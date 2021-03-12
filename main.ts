@@ -126,7 +126,7 @@ namespace CO2 {
     //% weight=7
     //% group="Funktionen"
     
-    export function writeNumNewLine2() {
+    export function writeNumNewLine2(): number {
         //addiere
         for (Indexa = 0; Indexa <= 3; Indexa++) {
             CO2_Werte_zeitlich[Indexa] = CO2_Werte_zeitlich[Indexa + 1]
