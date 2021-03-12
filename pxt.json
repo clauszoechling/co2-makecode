@@ -11,8 +11,7 @@
         "main.ts",
         "neopixel_oled.ts",
         "_locales/zh/SSD1306_OLED-strings.json",
-        "README.md",
-        "main.py"
+        "README.md"
     ],
     "testFiles": [
         "test.ts"
@@ -20,7 +19,7 @@
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "pyprj",
+    "preferredEditor": "tsprj",
     "yotta": {
         "config": {
             "microbit-dal": {
