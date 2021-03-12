@@ -121,10 +121,10 @@ namespace CO2 {
     //% block="berechne CO2 Median"
     //% weight=7
     //% group="Funktionen"
-    let Indexa = 0;
+
     export function writeNumNewLine2() {
         //addiere
-        for (Indexa = 0; Indexa <= 3; Indexa++) {
+        for (let Indexa = 0; Indexa <= 3; Indexa++) {
             CO2_Werte_zeitlich[Indexa] = CO2_Werte_zeitlich[Indexa + 1]
         }
         CO2_Werte_zeitlich.insertAt(4, Math.round(co2))
