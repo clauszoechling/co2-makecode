@@ -1128,7 +1128,7 @@ let font: Buffer;
     //% blockSetVariable=strip
     //% pin.defl=DigitalPin.P12
     //% numleds.defl=7
-    //% mode.defl=NeoPixelMode.RGB_RGB
+    //% mode.defl=NeoPixelMode.RGB
     //% subcategory="LEDs"
     //% group="LEDs"
     export function create(pin: DigitalPin,numleds: number,mode: NeoPixelMode): Strip {
