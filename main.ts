@@ -131,7 +131,8 @@ namespace CO2 {
         for (Indexa = 0; Indexa <= 3; Indexa++) {
             CO2_Werte_zeitlich[Indexa] = CO2_Werte_zeitlich[Indexa + 1]
         }
-        CO2_Werte_zeitlich.insertAt(4, Math.round(co2))
+        //CO2_Werte_zeitlich.insertAt(4, Math.round(co2))
+        CO2_Werte_zeitlich.insertAt(4, readCO2())
         
         //kopiere
         for (Indexb = 0; Indexb <= 4; Indexb++) {
