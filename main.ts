@@ -130,8 +130,8 @@ namespace CO2 {
         CO2_Werte_zeitlich.insertAt(4, Math.round(co2))
         
         //kopiere
-        for (let Index = 0; Index <= 4; Index++) {
-            CO2_Werte_sortiert.insertAt(Index, CO2_Werte_zeitlich[Index])
+        for (let Indexb = 0; Indexb <= 4; Indexb++) {
+            CO2_Werte_sortiert.insertAt(Indexb, CO2_Werte_zeitlich[Indexb])
         }
 
 
