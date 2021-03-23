@@ -1,11 +1,3 @@
-let CO2_Werte_zeitlich = [400,400,400,400,400]
-let CO2_Werte_sortiert = [400,400,400,400,400]
-let temp = 400
-let Indexa = 0
-let Indexb = 0
-let k = 0
-let i = 0
-
 /**
  * CO2 block
  */
@@ -118,47 +110,6 @@ namespace CO2 {
     export function readCO2(): number{
         return Math.round(co2)
     }
-
-
-    /** ------- Anfang Funktionen ----------- */
-
-    //% block="berechne CO2 Median"
-    //% weight=7
-    //% group="Funktionen"
-    
-    export function writeNumNewLine2(): number {
-        //addiere
-        for (Indexa = 0; Indexa <= 3; Indexa++) {
-            CO2_Werte_zeitlich[Indexa] = CO2_Werte_zeitlich[Indexa + 1]
-        }
-        //CO2_Werte_zeitlich.insertAt(4, Math.round(co2))
-        CO2_Werte_zeitlich.insertAt(4, readCO2())
-        
-        //kopiere
-        for (Indexb = 0; Indexb <= 4; Indexb++) {
-            CO2_Werte_sortiert.insertAt(Indexb, CO2_Werte_zeitlich[Indexb])
-        }
-
-
-        //sortiere
-        for (k = 0; k <= 4; k++) {
-            for (i = 0; i <= 3 - k; i++) {
-                if (CO2_Werte_sortiert[i] > CO2_Werte_sortiert[i + 1]) {
-                    temp = CO2_Werte_sortiert[i]
-                    CO2_Werte_sortiert[i] = CO2_Werte_sortiert[i + 1]
-                    CO2_Werte_sortiert[i + 1] = temp
-                }
-            }
-        }
-
-    return CO2_Werte_sortiert[2]
-
-    }
-
-
-
-    /** -------- Ende Funktionen ---------- */
-
 
 
 
