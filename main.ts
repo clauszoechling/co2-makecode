@@ -176,7 +176,7 @@ namespace CO2 {
     //% delay.min=0 delay.defl=5000
     //% subcategory="WIFI"
     //% group="WIFI"
-    //% blockHidden=true
+    //% blockHidden=false
     export function wait(delay: number) {
         if (delay > 0) basic.pause(delay)
     }
