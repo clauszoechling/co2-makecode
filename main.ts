@@ -151,8 +151,13 @@ namespace CO2 {
     //% group="WIFI"
     
 
-    export function connectThingSpeak(ip: string, write_api_key: string, field: number, data: number) {
-
+ /**
+    * Connect to ThingSpeak and upload data. It would not upload anything if it failed to connect to Wifi or ThingSpeak.
+    */
+    //% block="Upload data to ThingSpeak|URL/IP = %ip|Write API key = %write_api_key|Field = %field|Wert = %value"
+    //% ip.defl=api.thingspeak.com
+    //% write_api_key.defl=your_write_api_key
+    export function connectThingSpeak(ip: string, write_api_key: string, field: number, value: number) {
         if (wifi_connected && write_api_key != "") {
             thingspeak_connected = false
             sendAT("AT+CIPSTART=\"TCP\",\"" + ip + "\",80", 0) // connect to website server
@@ -160,7 +165,7 @@ namespace CO2 {
             basic.pause(100)
             if (thingspeak_connected) {
                 last_upload_successful = false
-                let str: string = "GET /update?api_key=" + write_api_key + "&field" + field +"=" + data
+                let str: string = "GET /update?api_key=" + write_api_key + "&field" +field + "=" + value
                 sendAT("AT+CIPSEND=" + (str.length + 2))
                 sendAT(str, 0) // upload data
                 last_upload_successful = waitResponse()
