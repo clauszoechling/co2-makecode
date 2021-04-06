@@ -137,6 +137,7 @@ namespace CO2 {
         sendAT("AT+CWJAP=\"" + ssid + "\",\"" + pw + "\"", 0) // connect to Wifi router
         wifi_connected = waitResponse()
         basic.pause(100)
+        basic.pause(3000)
     }
 
 
@@ -165,6 +166,7 @@ namespace CO2 {
                 sendAT(str, 0) // upload data
                 last_upload_successful = waitResponse()
                 basic.pause(100)
+                basic.pause(3000)
             }
         }
     }
