@@ -112,6 +112,18 @@ namespace CO2 {
     }
 
 
+    /**
+     * Buzzer an
+     */
+    //% weight=87 blockGap=20
+    //% block="Buzzer an"
+    //% blockId=buzzer_an
+    //% group="CO2"
+    export function buzzer_an(){
+        pins.digitalWritePin(DigitalPin.P8, 1)
+    }
+
+
 
     /**
     * Initialize ESP8266 module and connect it to Wifi router
