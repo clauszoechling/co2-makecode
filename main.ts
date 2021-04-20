@@ -120,7 +120,7 @@ namespace CO2 {
     //% blockId=buzzer_an
     //% group="CO2"
     export function buzzer_an(){
-        pins.digitalWritePin(DigitalPin.P8, 1)
+        pins.digitalWritePin(DigitalPin.P0, 1)
     }
 
         /**
@@ -131,7 +131,7 @@ namespace CO2 {
     //% blockId=buzzer_aus
     //% group="CO2"
     export function buzzer_aus(){
-        pins.digitalWritePin(DigitalPin.P8, 0)
+        pins.digitalWritePin(DigitalPin.P0, 0)
     }
 
 
