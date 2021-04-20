@@ -123,6 +123,17 @@ namespace CO2 {
         pins.digitalWritePin(DigitalPin.P8, 1)
     }
 
+        /**
+     * Buzzer aus
+     */
+    //% weight=87 blockGap=20
+    //% block="Buzzer aus"
+    //% blockId=buzzer_aus
+    //% group="CO2"
+    export function buzzer_aus(){
+        pins.digitalWritePin(DigitalPin.P8, 0)
+    }
+
 
 
     /**
