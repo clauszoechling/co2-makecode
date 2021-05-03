@@ -118,7 +118,7 @@ namespace CO2 {
     //% weight=87 blockGap=20
     //% block="Buzzer an"
     //% blockId=buzzer_an
-    //% group="CO2"
+    //% group="Buzzer"
     export function buzzer_an(){
         pins.digitalWritePin(DigitalPin.P0, 1)
     }
